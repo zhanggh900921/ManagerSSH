@@ -1,0 +1,14 @@
+#Sun Feb 01 20:40:05 CST 2015
+tomcat6Server.Manager.deployIsOverProject=false
+tomcat6Server.Manager.isExploded=true
+tomcat6Server.Manager.isUptoDate=true
+tomcat6Server.Manager.contextRoot=/Manager
+tomcat6Server.Manager.shouldOverwrite=false
+tomcat6Server.Manager.isDeployed=true
+tomcat6Server.Manager.noFileCopy=false
+tomcat6Server.Manager.type=WebDeployment
+tomcat6Server.Manager.shouldBackup=false
+eclipse.preferences.version=1
+tomcat6Server.Manager.IEARProjectName=
+tomcat6Server.Manager.altContextRoot=
+tomcat6Server.Manager.deploymentPath=D\:\\tomcat6.0.43\\webapps\\Manager

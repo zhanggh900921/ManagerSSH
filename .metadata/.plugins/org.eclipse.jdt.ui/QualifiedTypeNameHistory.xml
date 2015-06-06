@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
+<fullyQualifiedTypeName name="service.NetworkService"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="dao.impl.NetworkDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="com.zhtelecom.common.topograph.TopoGraphView"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="dao.BaseDao"/>
+<fullyQualifiedTypeName name="model.Link"/>
+<fullyQualifiedTypeName name="dao.LinkDao"/>
+<fullyQualifiedTypeName name="dao.impl.BaseDaoImpl"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="dao.NodeDao"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="dao.impl.SubnetDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="service.SubnetService"/>
+<fullyQualifiedTypeName name="model.Network"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="model.Node"/>
+<fullyQualifiedTypeName name="model.FlowStatistics"/>
+<fullyQualifiedTypeName name="dao.impl.FlowStatisticsDaoImpl"/>
+<fullyQualifiedTypeName name="dao.impl.NodeDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+</qualifiedTypeNameHistroy>

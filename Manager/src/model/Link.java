@@ -1,0 +1,150 @@
+package model;
+
+import java.util.*;
+import java.util.Set;
+
+import javax.persistence.*;
+
+
+@Entity
+public class Link {
+	@Id @Column(name="link_id")
+	
+	private int id;
+	private double delay;
+	
+	
+	@ManyToMany(targetEntity=Network.class,fetch=FetchType.EAGER)
+	@JoinTable(name="link_network",
+	joinColumns=@JoinColumn(name="link_id",referencedColumnName="link_id"),
+	inverseJoinColumns=@JoinColumn(name="network_id",referencedColumnName="network_id")
+			)
+	private Set<Network> networks = new HashSet<Network>();
+	
+	@ManyToMany(targetEntity=Subnet.class,fetch=FetchType.EAGER)
+	@JoinTable(name="link_subnet",
+	joinColumns=@JoinColumn(name="link_id",referencedColumnName="link_id"),
+	inverseJoinColumns=@JoinColumn(name="subnet_id",referencedColumnName="subnet_id")			
+			)
+	private Set<Subnet> subnets = new HashSet<Subnet>();
+
+	
+	@ManyToMany(targetEntity=Node.class, mappedBy="links",fetch=FetchType.EAGER)
+	private List<Node> nodes = new ArrayList<Node>(2);              //这里改为List，因为Ognl提取set的值不方便
+
+	private long icnBw;
+	private long idnBw;
+	private long ianBw;
+	private long isnBw;
+	private long sum;
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public double getDelay() {
+		return delay;
+	}
+
+
+	public void setDelay(double delay) {
+		this.delay = delay;
+	}
+
+
+
+
+	public long getIcnBw() {
+		return icnBw;
+	}
+
+
+	public void setIcnBw(long icnBw) {
+		this.icnBw = icnBw;
+	}
+
+
+	public long getIdnBw() {
+		return idnBw;
+	}
+
+
+	public void setIdnBw(long idnBw) {
+		this.idnBw = idnBw;
+	}
+
+
+	public long getIanBw() {
+		return ianBw;
+	}
+
+
+	public void setIanBw(long ianBw) {
+		this.ianBw = ianBw;
+	}
+
+
+	public long getIsnBw() {
+		return isnBw;
+	}
+
+
+	public void setIsnBw(long isnBw) {
+		this.isnBw = isnBw;
+	}
+
+
+	public long getSum() {
+		return sum;
+	}
+
+
+	public void setSum(long sum) {
+		this.sum = sum;
+	}
+
+
+	public Set<Network> getNetworks() {
+		return networks;
+	}
+
+
+	public void setNetworks(Set<Network> networks) {
+		this.networks = networks;
+	}
+
+
+	public Set<Subnet> getSubnets() {
+		return subnets;
+	}
+
+
+	public void setSubnets(Set<Subnet> subnets) {
+		this.subnets = subnets;
+	}
+
+
+	public List<Node> getNodes() {
+		return nodes;
+	}
+
+
+	public void setNodes(List<Node> nodes) {
+		this.nodes = nodes;
+	}
+
+
+
+	
+	
+
+	
+	
+	
+}
