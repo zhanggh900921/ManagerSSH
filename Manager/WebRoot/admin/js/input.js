@@ -14,8 +14,8 @@
                 case "subnet":
                     return pre_message + "请输入合法的网络名称";
                 
-                case "desc":
-                    return pre_message + "请输入10-100字的关于网络的介绍</span>";
+                case "flowLimit":
+                    return pre_message + "单位是 M</span>";
                
                 default:
                     return "";

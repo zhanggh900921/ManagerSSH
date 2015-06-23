@@ -42,7 +42,7 @@
 	<tbody>
 		<s:iterator value="networks" var="n" status="I">
 		<tr>
-			<th scope="row"><a href="Flow-subnet?network.id=<s:property value="#n.id"/>" style="font-size: large; color: blue;"><s:property value="#n.name"/></a></th>
+			<th scope="row"><a href="Flow-subnet2?network.id=<s:property value="#n.id"/>" style="font-size: large; color: blue;"><s:property value="#n.name"/></a></th>
 			<td style="font-size: large; "><s:property value="#n.flow"/></td>
 
 		</tr>

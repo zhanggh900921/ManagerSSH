@@ -26,13 +26,18 @@ public class FlowAction extends ActionSupport{
 		
 		networks = flowService.networksFlowUpdate();
 		
-
 		return SUCCESS;
 	}
 	
 	public String subnet() {
-		subnets = subnetService.getWithNetwork(network.getId());
+		networks = networkService.list();
+		return SUCCESS;
+	}
+	
+	public String subnet2() {
 		network = networkService.get(network.getId());
+		subnets = flowService.subnetFlowUpdate(network.getId());
+			
 		return SUCCESS;
 	}
 	
@@ -44,6 +49,7 @@ public class FlowAction extends ActionSupport{
 	
 	public String update() {
 		flowService.nodesFlowUpdate();
+		
 		return SUCCESS;
 	}
 

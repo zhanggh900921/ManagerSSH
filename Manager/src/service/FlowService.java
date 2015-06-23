@@ -13,6 +13,8 @@ import dao.impl.*;
 public class FlowService {
 	private NodeDaoImpl nodeDaoImpl;
 	private NetworkDaoImpl networkDaoImpl;
+	private SubnetService subnetService;
+	private SubnetDaoImpl subnetDaoImpl;
 	
 	public static String getReturnData(String urlString) throws UnsupportedEncodingException {
 		String res = ""; 
@@ -75,8 +77,7 @@ public class FlowService {
 	public void nodesFlowUpdate() {
 		List<Node> nodes = nodeDaoImpl.findAll(Node.class);
 		for(Node n:nodes) {
-			if(n.isEnable()) {
-				
+			if(n.isEnable()) {			
 				fetch(n.getId());
 			}
 		}
@@ -114,6 +115,48 @@ public class FlowService {
 		}
 		return networks;
 	}
+	
+	public List<Subnet> subnetFlowUpdate(int networkId) {
+		List<Subnet> subnets = subnetService.getWithNetwork(networkId);
+		
+		if(networkId==1) {
+			for(Subnet subnet:subnets) {
+				int flow=0;
+				for(Node n:subnet.getNodes())
+					flow+=n.getIcnFlow();
+				subnet.setFlow(flow);
+				subnetDaoImpl.update(subnet);
+			}
+		}
+		else if(networkId==2) {
+			for(Subnet subnet:subnets) {
+				int flow=0;
+				for(Node n:subnet.getNodes())
+					flow+=n.getIdnFlow();
+				subnet.setFlow(flow);
+				subnetDaoImpl.update(subnet);
+			}
+		}
+		else if(networkId==3) {
+			for(Subnet subnet:subnets) {
+				int flow=0;
+				for(Node n:subnet.getNodes())
+					flow+=n.getIanFlow();
+				subnet.setFlow(flow);
+				subnetDaoImpl.update(subnet);
+			}
+		}
+		else if(networkId==4) {
+			for(Subnet subnet:subnets) {
+				int flow=0;
+				for(Node n:subnet.getNodes())
+					flow+=n.getIsnFlow();
+				subnet.setFlow(flow);
+				subnetDaoImpl.update(subnet);
+			}
+		}
+		return subnets;
+	}
 
 	public List<Node> get() {
 		return nodeDaoImpl.findAll(Node.class);
@@ -139,6 +182,24 @@ public class FlowService {
 	public void setNetworkDaoImpl(NetworkDaoImpl networkDaoImpl) {
 		this.networkDaoImpl = networkDaoImpl;
 	}
+
+	public SubnetService getSubnetService() {
+		return subnetService;
+	}
+
+	public void setSubnetService(SubnetService subnetService) {
+		this.subnetService = subnetService;
+	}
+
+	public SubnetDaoImpl getSubnetDaoImpl() {
+		return subnetDaoImpl;
+	}
+
+	public void setSubnetDaoImpl(SubnetDaoImpl subnetDaoImpl) {
+		this.subnetDaoImpl = subnetDaoImpl;
+	}
+
+	
 
 	
 

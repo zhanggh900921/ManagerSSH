@@ -6,6 +6,7 @@ import java.util.*;
 import dao.impl.*;
 import model.Link;
 
+import model.Network;
 import model.Node;
 import model.Subnet;
 
@@ -73,6 +74,26 @@ public class SubnetService {
 		subnetDaoImpl.update(subnet);
 	}
 	
+	public void virtualization(int networkId, int nodeNum, int subnetId) {
+		Network network = NetworkDaoImpl.get(Network.class, networkId);
+		Set<Node> nodes = network.getNodes();
+		Set<Link> links = network.getLinks();
+		
+		List<Node> nodes2 = new ArrayList<Node>(nodes);
+		Collections.sort(nodes2, new Comparator<Node>(){
+			   public int compare(Node n1,Node n2){
+			    return (int)(n1.getSum() - n2.getSum());
+			   }
+			  });
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnetId);
+		for(int i=0;i<nodeNum;i++) {
+			subnet.getNodes().add(nodes2.get(i));
+		}
+		subnet.getLinks().addAll(links);
+		
+		subnetDaoImpl.update(subnet);
+	}
+	
 	public SubnetDaoImpl getSubnetDaoImpl() {
 		return subnetDaoImpl;
 	}
@@ -106,6 +127,8 @@ public class SubnetService {
 	public void setNetworkDaoImpl(NetworkDaoImpl networkDaoImpl) {
 		NetworkDaoImpl = networkDaoImpl;
 	}
+
+	
 
 
 

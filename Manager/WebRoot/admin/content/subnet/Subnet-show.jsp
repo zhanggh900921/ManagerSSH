@@ -96,7 +96,20 @@ $(document).ready(function(){
     <td class="imgtd"><img src="images/topology/router.png" /></td>
      <td id=<s:property value="#I.index"/>><s:property value="#n.id"/></td>
     <td ><s:property value="#n.name"/></td>
-    <td><s:property value="#n.sum"/><p>byte</p></td>
+    <td>
+    	<s:if test="network.id==1">
+    		<s:property value="#n.icnFlow"/>
+    	</s:if>
+    	<s:elseif test="network.id==2">
+    		<s:property value="#n.idnFlow"/>
+    	</s:elseif>
+    	<s:elseif test="network.id==3">
+    		<s:property value="#n.ianFlow"/>
+    	</s:elseif>
+    	<s:elseif test="network.id==4">
+    		<s:property value="#n.isnFlow"/>
+    	</s:elseif>
+    <p>byte</p></td>
     <td>
     	<style>
 		h{padding:0px; margin:0px;display: inline;}    /* 能够使<h>标签不换行 */
@@ -147,7 +160,20 @@ $(document).ready(function(){
     <tr>
     <td class="imgtd"><img src="images/topology/link.png" /></td>
     <td id=<s:property value="#M.index"/>_l><s:property value="#l.id"/></td>
-    <td><s:property value="#l.bandwidth"/><p>M</p></td>
+    <td>
+    	<s:if test="network.id==1">
+    		<s:property value="#l.icnBw"/>
+    	</s:if>
+    	<s:elseif test="network.id==2">
+    		<s:property value="#l.idnBw"/>
+    	</s:elseif>
+    	<s:elseif test="network.id==3">
+    		<s:property value="#l.ianBw"/>
+    	</s:elseif>
+    	<s:elseif test="network.id==4">
+    		<s:property value="#l.isnBw"/>
+    	</s:elseif>
+    <p>M</p></td>
     <td>
 		节点<h id=<s:property value="#M.index" />_0 "><s:property value="#l.nodes[0].id"/></h>
    	and	节点<h id=<s:property value="#M.index"/>_1  "><s:property value="#l.nodes[1].id"/></h>

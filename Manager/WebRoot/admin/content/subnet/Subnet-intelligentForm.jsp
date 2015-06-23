@@ -17,7 +17,7 @@
     </ul>
     </div>
     
-    <form action="Subnet-virtualization?subnet.id=<s:property value="subnet.id"/>&network.id=<s:property value="network.id"/>" method="post">
+    <form action="Subnet-virtualization" method="get">
     <div class="formbody" >
     
     <div class="formtitle" style="color: red;font-size: larger;"><span>服务承载网智能虚拟化重构</span></div>
@@ -25,14 +25,15 @@
     <ul class="forminfo">
     <li><label>期望的节点数</label><input name="nodeNum" type="text" class="dfinput" /><i>不能大于当前多态节点数</i><i style="color: red"><s:property value="nodes.size()"/></i></li>
     <li><label>期望的链路数</label><input name="linkNum" type="text" class="dfinput" /><i>不能大于当前多态链路数</i><i style="color: red"><s:property value="links.size()"/></i></li>
-    <li><label>是否分配流量</label><cite><input name="isFlow" type="radio" value="yes"  checked="checked"/>是&nbsp;&nbsp;&nbsp;&nbsp;<input name="isFlow" type="radio" value="no" />否</cite></li>
-    <li><label>当前流量限制</label><input name="" type="text" class="dfinput" value="" /></li>
+    
     <li><label>附加要求说明</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认提交"/></li>
     </ul>
     
     
     </div>
+    <input type="hidden" name="subnet.id" value='<s:property value="subnet.id"/>' >
+    <input type="hidden" name="network.id" value="<s:property value="network.id"/>">
 	</form>
 
 <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>

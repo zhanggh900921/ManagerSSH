@@ -37,5 +37,7 @@
 	 <bean id="flowService" class="service.FlowService">
 		<property name="nodeDaoImpl" ref="nodeDaoImpl"></property>
 		<property name="networkDaoImpl" ref="networkDaoImpl"></property>
+		<property name="subnetService" ref="subnetService"></property>
+		<property name="subnetDaoImpl" ref="subnetDaoImpl"></property>
 	 </bean> 
 </beans>

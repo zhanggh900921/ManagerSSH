@@ -24,6 +24,11 @@ public class SubnetAction extends ActionSupport{
 	private String[] deleteNodes;
 	private String[] addLinks;
 	private String[] deleteLinks;
+	
+	//ÍøÂçÐéÄâ»¯²ÎÊý
+	private int nodeNum;
+	
+	
 
 	public String register() {
 		networks = networkService.list();
@@ -33,6 +38,7 @@ public class SubnetAction extends ActionSupport{
 	public String registerOK() {
 		network = networkService.get(subnet.getNetwork().getId());
 		subnet.setNetwork(network);
+		subnet.setFlowLimit(subnet.getFlowLimit()*1024);
 		subnetService.add(subnet);
 		return SUCCESS;
 	}
@@ -65,19 +71,22 @@ public class SubnetAction extends ActionSupport{
 	
 	public String intelligentForm() {
 		
+
 		int subnetId = subnet.getId();
 		subnet = subnetService.get(subnetId);
 		network = subnet.getNetwork();
-		nodes = networkService.getNodes(network.getId());
-		links = networkService.getLinks(network.getId());
+		nodes = network.getNodes();
+		links = network.getLinks();
+		
 		return SUCCESS;
 	}
 	
 	public String virtualization() {
+		
 		int subnetId = subnet.getId();
 		int networkId = network.getId();
-		nodes = networkService.getNodes(networkId);
-		links = networkService.getLinks(networkId);
+				
+		subnetService.virtualization(networkId,nodeNum,subnetId);
 		return SUCCESS;
 	}
 	
@@ -105,7 +114,7 @@ public class SubnetAction extends ActionSupport{
 	public String show() {
 		int subnetId = subnet.getId();
 		subnet = subnetService.get(subnetId);
-		
+		network = subnet.getNetwork();
 		return SUCCESS;
 	}
 	
@@ -228,6 +237,18 @@ public class SubnetAction extends ActionSupport{
 	public void setDeleteLinks(String[] deleteLinks) {
 		this.deleteLinks = deleteLinks;
 	}
+
+	public int getNodeNum() {
+		return nodeNum;
+	}
+
+	public void setNodeNum(int nodeNum) {
+		this.nodeNum = nodeNum;
+	}
+
+
+
+
 
 
 

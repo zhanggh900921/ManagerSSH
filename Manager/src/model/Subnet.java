@@ -20,11 +20,10 @@ public class Subnet {
 	@GeneratedValue
 	private int id;
 	private String name;
-	@Column(nullable = false, columnDefinition="double default 0")
-	private double flow=0;    //此处为设置对象的默认值，需要先把原来的表删除掉在设置
 	
-	@Column(nullable = false, columnDefinition="double default 0")
-	private double cost=0;    //此处为设置对象的默认值，需要先把原来的表删除掉在设置
+	private long flow=0;    
+	
+	private long flowLimit;    
 	
 	@ManyToOne(targetEntity=Network.class)
 	@JoinColumn(name="network_id" , referencedColumnName="network_id",nullable=true)
@@ -76,18 +75,19 @@ public class Subnet {
 	public void setLinks(Set<Link> links) {
 		this.links = links;
 	}
-	public double getFlow() {
+	public long getFlow() {
 		return flow;
 	}
-	public void setFlow(double flow) {
+	public void setFlow(long flow) {
 		this.flow = flow;
 	}
-	public double getCost() {
-		return cost;
+	public long getFlowLimit() {
+		return flowLimit;
 	}
-	public void setCost(double cost) {
-		this.cost = cost;
+	public void setFlowLimit(long flowLimit) {
+		this.flowLimit = flowLimit;
 	}
+
 	
 	
 }

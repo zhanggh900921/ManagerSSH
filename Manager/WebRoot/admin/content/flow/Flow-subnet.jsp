@@ -3,53 +3,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>Charting</title>
-	<link href="css/flow/basic.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="js/flow/_shared/EnhanceJS/enhance.js"></script>		
-	<script type="text/javascript">
-		// Run capabilities test
-		enhance({
-			loadScripts: [
-				'js/flow/excanvas.js',
-				'js/flow/_shared/jquery.min.js',
-				'js/flow/visualize.jQuery.js',
-				'js/flow/example-editable.js'
-			],
-			loadStyles: [
-				'css/flow/visualize.css',
-				'css/flow/visualize-light.css'
-			]	
-		});   
-    </script>
-    <style type="text/css">
-    	table { float: left; margin: 140px 40px 0 0;  }
-    	td input { border: 1px solid orange; background: yellow; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; position: absolute; padding: 8px 0; text-align: center; width: 60px; margin: -17px 0 0 4px; font-size: 1.4em; }
-    	td.input { padding: 0; position: relative; }
-    	.visualize { float: left; }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
 </head>
+
+
 <body>
 
-<table >
-	<caption style="font-size: 25px; color: red"><s:property value="network.name"/>逻辑网流量统计</caption>
-	<thead>
-		<tr>
-			<td></td>
-			<th scope="col" style="font-size: large; ">流量</th>
-		</tr>
-	</thead>
-	<tbody>
-		<s:iterator value="subnets" var="s" status="I">
-		<tr>
-			<th scope="row" style="font-size: large; color: blue;"><s:property value="#s.name"/></th>
-			<td style="font-size: large; "><s:property value="#s.flow"/></td>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">性能管理</a></li>
+    <li><a href="computer.html">服务承载网流量统计</a></li>
+   
+    </ul>
+    </div>
+    
+    
+    <table class="filetable">
+    
+    <thead>
+    	<tr>
+        <th width="25%">名称</th>
+        <th width="11%">修改日期</th>
+        <th width="10%">类型</th>
+        <th width="6%">流量大小</th>
+        <th width="48%"></th>
+        </tr>    	
+    </thead>
+    
+    <tbody>
+    <s:iterator value="networks" var="n" status="I">
+    	<tr>
+        <td><img src="images/f01.png" /><a href="Flow-subnet2?network.id=<s:property value="#n.id"/>"><s:property value="#n.name"/></a></td>
+        <td>2015/8/14 17:38</td>
+        <td>文件夹</td>
+        <td ><s:property value="#n.flow"/></td>
+        <td></td>
+        </tr>
+    </s:iterator>  
+    
+    </tbody>
+    
+    
+    
+    
+    </table>
+    
+     
 
-		</tr>
-		</s:iterator>	
-	</tbody>
-	<a href="Flow-network" style="color:green; font-size: medium;">返回</a>
-</table>	
-
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
 </html>

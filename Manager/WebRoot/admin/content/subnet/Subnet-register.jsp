@@ -29,14 +29,21 @@
 				<input class="ui_reset" placeholder="申请方邮箱" data-sign="email" maxlength="20" />
 				<p>
 					<span class="sign"></span>
-					<span class="font">逻辑网信息</span>
+					<span class="font">服务承载网信息</span>
 				</p>
 				<span class="line"></span>
-				<input class="ui_reset" placeholder="逻辑网名称" data-sign="subnet" maxlength="20" name="subnet.name"/>
+				<input class="ui_reset" placeholder="服务承载网名称" data-sign="subnet" maxlength="20" name="subnet.name"/>
 				
-				<br />
+				<div style="color: gray;font-size: medium;">
+				是否分配流量：<input name="isFlow" type="radio" value="1"  checked="checked"/>是<input name="isFlow" type="radio" value="0" />否
 				
-				<div style="color: gray;font-size: medium;">请选择所属多态：
+				
+				
+				<input class="ui_reset" placeholder="流量上限" data-sign="flowLimit" maxlength="20" name="subnet.flowLimit"/>
+				
+				
+				
+				请选择所属多态：
 				<select name="subnet.network.id" >
 					<s:iterator value="networks" var="n" status="I">
 							<option value=<s:property value="#n.id"/> ><s:property value="#n.name"/></option>
@@ -45,9 +52,8 @@
 				</div>
 								
 				
-				<br />
+	
 				
-				<textarea class="ui_reset textarea" placeholder="逻辑网其他信息介绍和说明" data-sign="desc" maxlength="100" ></textarea>
 			</div>
 			<div class="title">
 				<input type="submit" class="btn" value="提交" />
