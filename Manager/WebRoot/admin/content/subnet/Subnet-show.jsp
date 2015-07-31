@@ -68,7 +68,8 @@ $(document).ready(function(){
         
         
         <ul class="toolbar1">
-             <li><span><img src="images/t05.png" /></span><a href="Subnet-form?subnet.id=<s:property value="subnet.id"/>">重构拓扑</a></li>
+        	<li><span><img src="images/t05.png" /></span><a href="Subnet-intelligentForm?subnet.id=<s:property value="subnet.id"/>">智能重构</a></li>
+            <li><span><img src="images/t05.png" /></span><a href="Subnet-form?subnet.id=<s:property value="subnet.id"/>">手动重构</a></li>
         </ul>
     
     </div>
@@ -221,7 +222,7 @@ $(document).ready(function(){
 		   var nodeSize = '<s:property value="subnet.nodes.size"/>';
 		   var linkSize = '<s:property value="subnet.links.size"/>';
 		   
-		   var myArray=new Array(20);
+		   var myArray=new Array(50);
 		   
 			/*画图时一切以节点或者链路在数据库中的ID来话，标签只是用来读出ID  */
 
@@ -229,7 +230,7 @@ $(document).ready(function(){
 		   for (var i=0;i<nodeSize;i++) {
 		   		var node=document.getElementById(i).innerHTML;
 		   		
-		   		myArray[node] = graph.createNode("节点"+node, drawLocation(12,i,0), drawLocation(12,i,1));
+		   		myArray[node] = graph.createNode("节点"+node, drawLocation(20,node,0), drawLocation(20,node,1));
 		   } 
 		   
 		    	
@@ -249,7 +250,7 @@ $(document).ready(function(){
 		 
     </script> 
 
-    <div id="canvas" style="width: 1000px; height: 400px; margin: auto; border: solid 1px #2898E0;"></div>
+    <div id="canvas" style="width: 1400px; height: 800px; margin: auto; border: solid 1px #2898E0;"></div>
     
    
    

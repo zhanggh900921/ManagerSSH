@@ -88,7 +88,9 @@ $(document).ready(function(){
     <th style="font-size: medium;">流量上限配置</th>
     <th style="font-size: medium;">当前所属多态(蓝色表示当前多态)</th>
     <th style="font-size: medium;">当前所属逻辑网</th>
-	 <th style="font-size: medium;">添加节点</th>
+	 <th style="font-size: medium;">添加节点
+	 	<input type="checkbox" name="check" onclick="checkAll('check');"/><a onclick="check.click()">全选</a>  
+	 </th>
 	 <th style="font-size: medium;">删除节点</th>
     </tr>
     </thead>
@@ -213,7 +215,23 @@ $(document).ready(function(){
    <hr align="center" width="1200px" color="grey" size="5" />
    <br />   
     
+    <script type="text/javascript">		//全部选中checkBox
+    	function checkAll() {  
+  
+		  var code_Values = document.getElementsByTagName("input");  
+		  
+		  for (i = 0; i < code_Values.length; i++) {  
+		  
+		    if (code_Values[i].name == "addNodes" ||code_Values[i].name == "addLinks") {  
+		  
+		      code_Values[i].checked = true;  
+		  
+		    }  
+		  }  
+		} 
+    </script> 
     
+
     
     <script type="text/javascript">		 
 		
@@ -221,14 +239,14 @@ $(document).ready(function(){
 			
 		   var nodeSize = '<s:property value="nodes.size"/>';
 		   var linkSize = '<s:property value="links.size"/>';
-		   var myArray=new Array(30);
+		   var myArray=new Array(50);
 		   
 
 
 		   var graph = new Q.Graph("canvas");
 		   for (var i=0;i<nodeSize;i++) {
 		   		var node=document.getElementById(i+"_n").innerHTML;
-		   		myArray[node] = graph.createNode("节点"+node, drawLocation(12,i,0), drawLocation(12,i,1));
+		   		myArray[node] = graph.createNode("节点"+node, drawLocation(20,node,0), drawLocation(20,node,1));
 		   } 
 		     
 		    	
@@ -249,7 +267,7 @@ $(document).ready(function(){
 		 
     </script> 
 
-    <div id="canvas" style="width: 1000px; height: 400px; margin: auto; border: solid 1px #2898E0;"></div>
+    <div id="canvas" style="width: 1400px; height: 800px; margin: auto; border: solid 1px #2898E0;"></div>
     
 
    

@@ -2,7 +2,8 @@ package dao.impl;
 
 import org.hibernate.*;
 
-import java.util.List;
+import java.util.*;
+
 import java.io.Serializable;
 
 import dao.*;

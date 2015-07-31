@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="dao.NodeDao"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
@@ -34,4 +33,5 @@
 <fullyQualifiedTypeName name="model.Network"/>
 <fullyQualifiedTypeName name="service.SubnetService"/>
 <fullyQualifiedTypeName name="dao.impl.SubnetDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>

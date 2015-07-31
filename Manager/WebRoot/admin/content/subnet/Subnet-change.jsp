@@ -27,6 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
     <%String subnetId = request.getParameter("subnet.id");        /* 此处用jsp传递了一下network的ID这个参数 */
     // String nodeId = request.getParameter("node.id");
-     response.sendRedirect("Subnet-form?subnet.id="+subnetId);  %> 
+     response.sendRedirect("Subnet-show?subnet.id="+subnetId);  %> 
   </body>
 </html>

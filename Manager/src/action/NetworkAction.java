@@ -85,6 +85,7 @@ public class NetworkAction extends ActionSupport{
 	public String show() {
 		int networkId = network.getId();
 		network = networkService.get(networkId);
+		
 		return SUCCESS;
 	}
 	
