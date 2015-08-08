@@ -73,7 +73,7 @@ $(document).ready(function(){
     </div>
    
     
-    <form name="myform" action="Subnet-change" method="get">
+    <form name="myform" action="Subnet-change" method="post">
     <input type="hidden" name="subnet.id" value='<s:property value="subnet.id"/>'/>
     <table class="imgtable">
     <!-- ÏÔÊ¾½Úµã -->

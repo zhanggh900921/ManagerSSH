@@ -2,8 +2,9 @@ package service;
 
 import java.io.*;
 import java.net.*;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
+
+import org.json.*;
 
 import model.*;
 
@@ -16,15 +17,15 @@ public class FlowService {
 	private SubnetService subnetService;
 	private SubnetDaoImpl subnetDaoImpl;
 	
-	public static String getReturnData(String urlString) throws UnsupportedEncodingException {
-		String res = ""; 
+	public String getReturnData(String urlString) throws UnsupportedEncodingException {
+		String res = ""; //获取JSON文件，字符串形式
 		try { 
 		URL url = new URL(urlString);
-		java.net.HttpURLConnection conn = (java.net.HttpURLConnection)url.openConnection();
-		java.io.BufferedReader in = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream(),"GBK"));
+		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"GBK"));
 		String line;
 		while ((line = in.readLine()) != null) {
-		res += line;
+			res += line;
 		}
 		in.close();
 		} catch (Exception e) {
@@ -33,29 +34,53 @@ public class FlowService {
 		return res;
 	}
 	
-	public long[] flowDecode(String s) {
-		String[]ss = s.split("&");
-		long[] rs = new long[ss.length];
-		for(int i=0;i<20;i++) {
-			rs[i] = Long.parseLong(ss[i]);
-		}
-		return rs;
-	}
+	public Map<String,String> decodeJSON(String jsonString) throws JSONException {
+
+        JSONObject jsonObject = new JSONObject(jsonString);//将JSON从字符串解析为哈希
+        
+        Map<String,String> result = new HashMap<String,String>();
+        Iterator iterator = jsonObject.keys();
+        String key = null;
+        String value = null;
+        
+        while (iterator.hasNext()) {
+
+            key = (String) iterator.next();
+            value = jsonObject.getString(key);
+            result.put(key, value);
+
+        }
+        return result;
+
+    }
 	
-	public void save(long[] flows,int node_id) {
+	public void save(Map<String,String> map, int node_id) {
 		
-		Node node = nodeDaoImpl.get(Node.class,node_id);
-		node.setIcnFlow(flows[5]+flows[7]);
-		node.setIdnFlow(flows[12]+flows[14]);
-		node.setIanFlow(flows[18]+flows[19]);
-		node.setSum(flows[5]+flows[7]+flows[12]+flows[14]+flows[18]+flows[19]);
+		Node node = nodeDaoImpl.get(Node.class,node_id);//获取节点的流量，CPU，内存
+		
+		long icnFlow = Long.parseLong(map.get("contentRecv"))+Long.parseLong(map.get("contentSend"));
+		long idnFlow = Long.parseLong(map.get("idnSendpacket"))+Long.parseLong(map.get("idnRecvpacket"));
+		long sum = icnFlow+idnFlow;
+		node.setIcnFlow(icnFlow);
+		node.setIdnFlow(idnFlow);
+		node.setIanFlow(0);
+		node.setIsnFlow(0);
+		node.setSum(sum);
+		
+		node.setCpu(Integer.parseInt(map.get("cpuLevel")));
+		
+		double free = Double.parseDouble((String) map.get("freeMemory"));
+		double total = Double.parseDouble((String) map.get("totalMemory"));
+		int memory = (int)(((total-free)/total)*100);
+		node.setMemory(memory);
+		
 		nodeDaoImpl.update(node);
 		
 	}
 
 	
 	
-	public void fetch(int i) {
+	public void fetch(int nodeId) { //获取单个节点的信息
 		
 		Properties props = new Properties();
 		try {
@@ -63,21 +88,23 @@ public class FlowService {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		String name = props.getProperty("name"+i);
-		String IP = props.getProperty("IP"+i);
+		String name = props.getProperty("name"+nodeId);
+		String IP = props.getProperty("IP"+nodeId);
 		try {
-			String s = getReturnData("http://"+IP+":6666/dataInfo?RouterName=/pku/217/"+name+"&method=throughput");
-			long[] flows = flowDecode(s);
-			save(flows,i);
+			String s = getReturnData("http://"+IP+":6666/dataInfo?RouterName="+name+"&method=throughput");
+			Map<String,String> map = decodeJSON(s);
+			save(map,nodeId);
 		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public void nodesFlowUpdate() {
+	public void nodesFlowUpdate() {  //依次获取每个节点
 		List<Node> nodes = nodeDaoImpl.findAll(Node.class);
 		for(Node n:nodes) {
-			if(n.isEnable()) {			
+			if(n.isEnable()) {		//为了防止底层路由器关闭而导致无法建立连接产生异常	
 				fetch(n.getId());
 			}
 		}

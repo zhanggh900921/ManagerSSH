@@ -58,7 +58,7 @@ $(document).ready(function(){
         
         
         <ul class="toolbar1">
-        <li><span><img src="images/t05.png" /></span>设置</li>
+        <li><span><img src="images/t05.png" /></span><a href="Breakdown-update" style="color: red">更新</a></li>
         </ul>
     
     </div>
@@ -68,8 +68,8 @@ $(document).ready(function(){
     	<thead>
     	<tr>     
         <th>节点名称</th>
-        <th>CPU使用</th>
-        <th>内存使用</th>
+        <th>CPU使用(%)</th>
+        <th>内存使用(%)</th>
         <th>面向内容(byte)</th>
         <th>面向身份(byte)</th>
         <th>面向地址(byte)</th>

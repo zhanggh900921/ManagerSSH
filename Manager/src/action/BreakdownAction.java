@@ -50,6 +50,12 @@ public class BreakdownAction extends ActionSupport{
 			
 		return SUCCESS;
 	}
+	
+	public String update() {
+		flowService.nodesFlowUpdate();
+		
+		return SUCCESS;
+	}
 
 	public TopologyService getTopologyService() {
 		return topologyService;

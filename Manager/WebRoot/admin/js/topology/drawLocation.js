@@ -4,7 +4,7 @@ function drawLocation(x,y,z) {
 	var location=new Array();
 	   for(var j=1;j<=20;j++) {
 	   		location[j]=new Array();
-	   		for(var k=0;k<50;k++) {
+	   		for(var k=0;k<21;k++) {
 	   			location[j][k]= new Array(2);
 	   		}
 	   }
@@ -56,26 +56,26 @@ function drawLocation(x,y,z) {
 	   location[20][9][1]=-200;
 	   location[20][10][0]=300;
 	   location[20][10][1]=50;
-	   location[20][20][0]=-600;
-	   location[20][20][1]=-100;
-	   location[20][21][0]=-600;
-	   location[20][21][1]=50;
-	   location[20][30][0]=600;
-	   location[20][30][1]=-200;
-	   location[20][31][0]=500;
-	   location[20][31][1]=-200;
-	   location[20][32][0]=600;
-	   location[20][32][1]=50;
-	   location[20][41][0]=-250;
-	   location[20][41][1]=250;
-	   location[20][42][0]=-100;
-	   location[20][42][1]=250;
-	   location[20][43][0]=50;
-	   location[20][43][1]=350;
-	   location[20][44][0]=50;
-	   location[20][44][1]=250;
-	   location[20][45][0]=250;
-	   location[20][45][1]=250;
+	   location[20][11][0]=-600;
+	   location[20][11][1]=-100;
+	   location[20][12][0]=-600;
+	   location[20][12][1]=50;
+	   location[20][13][0]=600;
+	   location[20][13][1]=-200;
+	   location[20][14][0]=500;
+	   location[20][14][1]=-200;
+	   location[20][15][0]=600;
+	   location[20][15][1]=50;
+	   location[20][16][0]=-250;
+	   location[20][16][1]=250;
+	   location[20][17][0]=-100;
+	   location[20][17][1]=250;
+	   location[20][18][0]=50;
+	   location[20][18][1]=350;
+	   location[20][19][0]=50;
+	   location[20][19][1]=250;
+	   location[20][20][0]=250;
+	   location[20][20][1]=250;
 	   
 	   
 	   return location[x][y][z];

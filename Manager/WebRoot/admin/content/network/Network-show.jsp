@@ -228,7 +228,7 @@ $(document).ready(function(){
 			
 		   var nodeSize = '<s:property value="network.nodes.size"/>';
 		   var linkSize = '<s:property value="network.links.size"/>';
-		   var myArray=new Array(50);
+		   var myArray=new Array(21);
 		   
 			/*画图时一切以节点或者链路在数据库中的ID来话，标签只是用来读出ID  */
 

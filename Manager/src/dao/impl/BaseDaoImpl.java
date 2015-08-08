@@ -130,7 +130,7 @@ public class BaseDaoImpl<T> implements BaseDao<T>
 	 */
 	@SuppressWarnings("unchecked")
 	protected List<T> findByPage(String hql , int pageNo, int pageSize
-		, Object... params)
+		, Object[] params)
 	{
 		// ¥¥Ω®≤È—Ø
 		Query query = getSessionFactory().getCurrentSession()

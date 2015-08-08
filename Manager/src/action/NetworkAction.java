@@ -30,7 +30,8 @@ public class NetworkAction extends ActionSupport{
 	
 	List<Integer> errorLink;
 	
-	public String list() {		
+	public String list() {
+		
 		networks = flowService.networksFlowUpdate();
 		
 		return SUCCESS;

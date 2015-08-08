@@ -146,7 +146,7 @@ $(document).ready(function(){
 			
 		   var nodeSize = '<s:property value="nodes.size"/>';
 		   var linkSize = '<s:property value="links.size"/>';
-		   var myArray=new Array(50);
+		   var myArray=new Array(21);
 		   
 			
 
