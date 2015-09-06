@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="81" version="2.0">
+<workbench progressCount="40" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="75">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="157" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -21,21 +21,21 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" itemType="typePlaceholder" x="38" y="22"/>
+<coolItem id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.imageeditor.editor.ImageEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="342" y="22"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -50,31 +50,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetService.java" partName="SubnetService.java" path="F:/973/ManagerSSH/Manager/src/service/SubnetService.java" title="SubnetService.java" tooltip="Manager/src/service/SubnetService.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetService.java" partName="SubnetService.java" path="F:/973/ManagerSSH/Manager/src/service/SubnetService.java" title="SubnetService.java" tooltip="Manager/src/service/SubnetService.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/service/SubnetService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6020" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" partName="FlowService.java" path="F:/973/ManagerSSH/Manager/src/service/FlowService.java" title="FlowService.java" tooltip="Manager/src/service/FlowService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/service/FlowService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2136" selectionTopPixel="765"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetAction.java" partName="SubnetAction.java" path="F:/973/ManagerSSH/Manager/src/action/SubnetAction.java" title="SubnetAction.java" tooltip="Manager/src/action/SubnetAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/SubnetAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2047" selectionTopPixel="1240"/>
-</editor>
-<editor id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext-common.xml" partName="applicationContext-common.xml" path="F:/973/ManagerSSH/Manager/src/applicationContext-common.xml" title="applicationContext-common.xml" tooltip="Manager/src/applicationContext-common.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/applicationContext-common.xml"/>
-</editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-node.jsp" partName="Breakdown-node.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp" title="Breakdown-node.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -414,61 +396,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/SubnetService.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/FlowService.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/SubnetService.java"/>
+<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" path="/Manager/src/config/router.properties"/>
 </editors>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="4952" y="0"/>
-</item>
-<item historyLabel="FlowService.java" index="1">
-<position info="not_deleted" x="339" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="4952" y="0"/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2571" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="5267" y="0"/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2571" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="5267" y="0"/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2120" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="1185" y="7"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="5519" y="0"/>
-</item>
-<item historyLabel="FlowService.java" index="1">
-<position info="not_deleted" x="2232" y="5"/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2120" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="5519" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="5018" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position info="not_deleted" x="1247" y="0"/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2047" y="0"/>
-</item>
-<item historyLabel="SubnetService.java" index="0">
-<position/>
-</item>
-<item historyLabel="SubnetAction.java" index="2">
-<position info="not_deleted" x="2047" y="0"/>
-</item>
 <item historyLabel="NetworkAction.java" index="3">
 <position info="not_deleted" x="675" y="0"/>
 </item>
@@ -554,7 +484,45 @@
 <item historyLabel="FlowService.java" index="8">
 <position info="not_deleted" x="2136" y="0"/>
 </item>
-<item active="true" historyLabel="Breakdown-node.jsp" index="9"/>
+<item historyLabel="Breakdown-node.jsp" index="9"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4048" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4053" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4053" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4258" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4464" y="0"/>
+</item>
+<item historyLabel="router.properties" index="11"/>
+<item historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="4487" y="0"/>
+</item>
+<item active="true" historyLabel="SubnetService.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -572,11 +540,14 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-node.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp">
-<persistable path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetService.java" tooltip="Manager/src/service/SubnetService.java">
+<persistable path="/Manager/src/service/SubnetService.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" name="router.properties" tooltip="Manager/src/config/router.properties">
 <persistable path="/Manager/src/config/router.properties"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-node.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp">
+<persistable path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext-common.xml" tooltip="Manager/src/applicationContext-common.xml">
 <persistable path="/Manager/src/applicationContext-common.xml"/>
@@ -589,9 +560,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" tooltip="Manager/src/service/FlowService.java">
 <persistable path="/Manager/src/service/FlowService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetService.java" tooltip="Manager/src/service/SubnetService.java">
-<persistable path="/Manager/src/service/SubnetService.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Subnet-virtualization.jsp" tooltip="Manager/WebRoot/admin/content/subnet/Subnet-virtualization.jsp">
 <persistable path="/Manager/WebRoot/admin/content/subnet/Subnet-virtualization.jsp"/>
