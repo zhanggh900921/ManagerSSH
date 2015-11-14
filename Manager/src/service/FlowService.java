@@ -58,20 +58,21 @@ public class FlowService {
 		
 		Node node = nodeDaoImpl.get(Node.class,node_id);//获取节点的流量，CPU，内存
 		
-		long icnFlow = Long.parseLong(map.get("contentRecv"))+Long.parseLong(map.get("contentSend"));
+		long icnFlow = Long.parseLong(map.get("icnRecvThroughput"));//获取内容网络吞吐量信息
 		long idnFlow = Long.parseLong(map.get("idnSendpacket"))+Long.parseLong(map.get("idnRecvpacket"));
-		long sum = icnFlow+idnFlow;
-		node.setIcnFlow(icnFlow);
+		long ianFlow = Long.parseLong(map.get("ipThroughput"));//获取IP网络吞吐量信息
+		long sum = icnFlow+idnFlow+ianFlow;//计算流量总和
+		node.setIcnFlow(icnFlow);//流量信息存入数据库
 		node.setIdnFlow(idnFlow);
-		node.setIanFlow(0);
+		node.setIanFlow(ianFlow);
 		node.setIsnFlow(0);
 		node.setSum(sum);
 		
-		node.setCpu(Integer.parseInt(map.get("cpuLevel")));
+		node.setCpu(Integer.parseInt(map.get("cpuLevel")));//获取CPU信息
 		
-		double free = Double.parseDouble((String) map.get("freeMemory"));
+		double free = Double.parseDouble((String) map.get("freeMemory"));//获取内存信息
 		double total = Double.parseDouble((String) map.get("totalMemory"));
-		int memory = (int)(((total-free)/total)*100);
+		int memory = (int)(((total-free)/total)*100);//计算内存使用率
 		node.setMemory(memory);
 		
 		nodeDaoImpl.update(node);
