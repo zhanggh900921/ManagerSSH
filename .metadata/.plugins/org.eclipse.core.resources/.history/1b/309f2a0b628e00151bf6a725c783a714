@@ -62,11 +62,11 @@ public class FlowService {
 		long idnFlow = Long.parseLong(map.get("idnSendpacket"))+Long.parseLong(map.get("idnRecvpacket"));
 		long ianFlow = Long.parseLong(map.get("ipThroughput"));//获取IP网络吞吐量信息
 		long isnFlow = (Long.parseLong(map.get("ipThroughput"))+Long.parseLong(map.get("idnSendpacket")))/2;//获取IP网络吞吐量信息
-		long sum = icnFlow+idnFlow+ianFlow+isnFlow;//计算流量总和
+		long sum = icnFlow+idnFlow+ianFlow;//计算流量总和
 		node.setIcnFlow(icnFlow);//流量信息存入数据库
 		node.setIdnFlow(idnFlow);
 		node.setIanFlow(ianFlow);
-		node.setIsnFlow(isnFlow);
+		node.setIsnFlow(0);
 		node.setSum(sum);
 		
 		node.setCpu(Integer.parseInt(map.get("cpuLevel")));//获取CPU信息

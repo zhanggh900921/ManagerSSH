@@ -66,7 +66,7 @@ public class FlowService {
 		node.setIcnFlow(icnFlow);//流量信息存入数据库
 		node.setIdnFlow(idnFlow);
 		node.setIanFlow(ianFlow);
-		node.setIsnFlow(isnFlow);
+		node.setIsnFlow(0);
 		node.setSum(sum);
 		
 		node.setCpu(Integer.parseInt(map.get("cpuLevel")));//获取CPU信息

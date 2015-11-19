@@ -95,28 +95,28 @@ $(document).ready(function(){
 	        	<td><s:property value="#n.memory"/></td>
 	        </s:else>
 	        <s:if test="#n.icnFlow>#n.icnFlowLimit">
-	        	<td style="color: red"><s:property value="#n.icnFlow"/>/<s:property value="#n.icnFlowLimit"/></td>
+	        	<td style="color: black;"><s:property value="#n.icnFlow"/>/<s:property value="#n.icnFlowLimit"/></td>
 	        </s:if>
 	        <s:else>
 	        	<td><s:property value="#n.icnFlow"/>/<s:property value="#n.icnFlowLimit"/></td>
 	        </s:else>
 	        
 	        <s:if test="#n.idnFlow>#n.idnFlowLimit">
-	        	<td style="color: red"><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
+	        	<td style="color: black;"><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
 	        </s:if>
 	        <s:else>
 	        	<td><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
 	        </s:else>
 	        
 	        <s:if test="#n.ianFlow>#n.ianFlowLimit">
-	        	<td style="color: red"><s:property value="#n.ianFlow"/>/<s:property value="#n.ianFlowLimit"/></td>
+	        	<td style="color: black;"><s:property value="#n.ianFlow"/>/<s:property value="#n.ianFlowLimit"/></td>
 	        </s:if>
 	        <s:else>
 	        	<td><s:property value="#n.ianFlow"/>/<s:property value="#n.ianFlowLimit"/></td>
 	        </s:else>
 	        
 	        <s:if test="#n.idnFlow>#n.idnFlowLimit">
-	        	<td style="color: red"><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
+	        	<td style="color: black;"><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
 	        </s:if>
 	        <s:else>
 	        	<td><s:property value="#n.idnFlow"/>/<s:property value="#n.idnFlowLimit"/></td>
