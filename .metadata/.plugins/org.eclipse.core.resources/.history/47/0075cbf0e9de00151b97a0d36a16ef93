@@ -1,0 +1,17 @@
+function drawLocation(x,y,z) {
+	
+	
+	var location=new Array();
+	   for(var j=0;j<=20;j++) {
+	   		location[j]=new Array();
+	   }
+	   
+
+	   location[7][1]=-200;
+
+
+	   
+	   
+	   return location[x][y];
+	
+}

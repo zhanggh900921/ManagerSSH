@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="81" version="2.0">
+<workbench progressCount="65" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="75">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="233" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="124" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -23,7 +23,7 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -34,11 +34,11 @@
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.imageeditor.editor.ImageEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="342" y="22"/>
-<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -54,119 +54,25 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
-<part id="14"/>
-<part id="15"/>
-<part id="16"/>
-<part id="17"/>
-<part id="18"/>
-<part id="19"/>
-<part id="20"/>
-<part id="21"/>
-<part id="22"/>
-<part id="23"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BreakdownAction.java" partName="BreakdownAction.java" path="F:/973/ManagerSSH/Manager/src/action/BreakdownAction.java" title="BreakdownAction.java" tooltip="Manager/src/action/BreakdownAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/BreakdownAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="256"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowAction.java" partName="FlowAction.java" path="F:/973/ManagerSSH/Manager/src/action/FlowAction.java" title="FlowAction.java" tooltip="Manager/src/action/FlowAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/FlowAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginAction.java" partName="LoginAction.java" path="F:/973/ManagerSSH/Manager/src/action/LoginAction.java" title="LoginAction.java" tooltip="Manager/src/action/LoginAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/LoginAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkAction.java" partName="NetworkAction.java" path="F:/973/ManagerSSH/Manager/src/action/NetworkAction.java" title="NetworkAction.java" tooltip="Manager/src/action/NetworkAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/NetworkAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="406" selectionTopPixel="109"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetAction.java" partName="SubnetAction.java" path="F:/973/ManagerSSH/Manager/src/action/SubnetAction.java" title="SubnetAction.java" tooltip="Manager/src/action/SubnetAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/SubnetAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TopologyAction.java" partName="TopologyAction.java" path="F:/973/ManagerSSH/Manager/src/action/TopologyAction.java" title="TopologyAction.java" tooltip="Manager/src/action/TopologyAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/TopologyAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BaseDao.java" partName="BaseDao.java" path="F:/973/ManagerSSH/Manager/src/dao/BaseDao.java" title="BaseDao.java" tooltip="Manager/src/dao/BaseDao.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/BaseDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BaseDaoImpl.java" partName="BaseDaoImpl.java" path="F:/973/ManagerSSH/Manager/src/dao/impl/BaseDaoImpl.java" title="BaseDaoImpl.java" tooltip="Manager/src/dao/impl/BaseDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/impl/BaseDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LinkDaoImpl.java" partName="LinkDaoImpl.java" path="F:/973/ManagerSSH/Manager/src/dao/impl/LinkDaoImpl.java" title="LinkDaoImpl.java" tooltip="Manager/src/dao/impl/LinkDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/impl/LinkDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkDaoImpl.java" partName="NetworkDaoImpl.java" path="F:/973/ManagerSSH/Manager/src/dao/impl/NetworkDaoImpl.java" title="NetworkDaoImpl.java" tooltip="Manager/src/dao/impl/NetworkDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/impl/NetworkDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NodeDaoImpl.java" partName="NodeDaoImpl.java" path="F:/973/ManagerSSH/Manager/src/dao/impl/NodeDaoImpl.java" title="NodeDaoImpl.java" tooltip="Manager/src/dao/impl/NodeDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/impl/NodeDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetDaoImpl.java" partName="SubnetDaoImpl.java" path="F:/973/ManagerSSH/Manager/src/dao/impl/SubnetDaoImpl.java" title="SubnetDaoImpl.java" tooltip="Manager/src/dao/impl/SubnetDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/dao/impl/SubnetDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link_Network.java" partName="Link_Network.java" path="F:/973/ManagerSSH/Manager/src/model/Link_Network.java" title="Link_Network.java" tooltip="Manager/src/model/Link_Network.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/model/Link_Network.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link_Subnet.java" partName="Link_Subnet.java" path="F:/973/ManagerSSH/Manager/src/model/Link_Subnet.java" title="Link_Subnet.java" tooltip="Manager/src/model/Link_Subnet.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/model/Link_Subnet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link.java" partName="Link.java" path="F:/973/ManagerSSH/Manager/src/model/Link.java" title="Link.java" tooltip="Manager/src/model/Link.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/model/Link.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Network.java" partName="Network.java" path="F:/973/ManagerSSH/Manager/src/model/Network.java" title="Network.java" tooltip="Manager/src/model/Network.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/model/Network.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Node_Network.java" partName="Node_Network.java" path="F:/973/ManagerSSH/Manager/src/model/Node_Network.java" title="Node_Network.java" tooltip="Manager/src/model/Node_Network.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/model/Node_Network.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="625" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" partName="FlowService.java" path="F:/973/ManagerSSH/Manager/src/service/FlowService.java" title="FlowService.java" tooltip="Manager/src/service/FlowService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/service/FlowService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="160" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" name="basicInformation.sql" partName="basicInformation.sql" path="F:/973/ManagerSSH/Manager/src/SQL/basicInformation.sql" title="basicInformation.sql" tooltip="Manager/src/SQL/basicInformation.sql" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/SQL/basicInformation.sql"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="133" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-node.jsp" partName="Breakdown-node.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp" title="Breakdown-node.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-link.jsp" partName="Breakdown-link.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp" title="Breakdown-link.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.html" name="left.html" partName="left.html" path="F:/973/ManagerSSH/Manager/WebRoot/admin/left.html" title="left.html" tooltip="Manager/WebRoot/admin/left.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/left.html"/>
 </editor>
 <editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="F:/973/ManagerSSH/Manager/src/struts.xml" title="struts.xml" tooltip="Manager/src/struts.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/struts.xml"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Network-show.jsp" partName="Network-show.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/network/Network-show.jsp" title="Network-show.jsp" tooltip="Manager/WebRoot/admin/content/network/Network-show.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/network/Network-show.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-node.jsp" partName="Demonstration-node.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" title="Demonstration-node.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Network-list.jsp" partName="Network-list.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/network/Network-list.jsp" title="Network-list.jsp" tooltip="Manager/WebRoot/admin/content/network/Network-list.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/network/Network-list.jsp"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DemonstrationAction.java" partName="DemonstrationAction.java" path="F:/973/ManagerSSH/Manager/src/action/DemonstrationAction.java" title="DemonstrationAction.java" tooltip="Manager/src/action/DemonstrationAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/DemonstrationAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.htm" partName="index.htm" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/index.htm" title="index.htm" tooltip="Manager/WebRoot/admin/content/demonstration/index.htm" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
 </editor>
 </editors>
 <views>
@@ -176,6 +82,9 @@
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy"/>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
 <view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers"/>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
 <viewState/>
@@ -329,6 +238,7 @@
 <view id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <view id="uky.article.imageviewer.views.ImageView"/>
@@ -358,10 +268,12 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@6a3b1937" ratio="0.54868627" ratioLeft="355" ratioRight="292" relationship="4" relative="org.eclipse.ui.internal.ViewStack@d1cfd52">
-<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.views.ProgressView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -496,178 +408,110 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/FlowAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/LoginAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/NetworkAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/SubnetAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/TopologyAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/computer.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/FlowService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/FlowAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/LoginAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/NetworkAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/SubnetAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/TopologyAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/computer.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/BreakdownAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/FlowAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/LoginAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/NetworkAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/SubnetAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/TopologyAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/BaseDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/impl/BaseDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/impl/LinkDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/impl/NetworkDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/impl/NodeDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/dao/impl/SubnetDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/model/Link_Network.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/model/Link_Subnet.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/model/Link.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/model/Network.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/model/Node_Network.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/FlowService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" path="/Manager/src/SQL/basicInformation.sql"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/extension/BMap/doc/example.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/extension/BMap/doc/example.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/extension/BMap/doc/example.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/Manager/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/network/Network-show.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/network/Network-list.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/NetworkAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/FlowService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/demo.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-flow.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
 </editors>
-<item historyLabel="FlowAction.java" index="0">
+<item historyLabel="left.html" index="0">
+<position info="not_deleted" x="2947" y="0"/>
+</item>
+<item historyLabel="example.html" index="1"/>
+<item historyLabel="example.js" index="2">
+<position info="not_deleted" x="20954" y="0"/>
+</item>
+<item historyLabel="example.html" index="3"/>
+<item historyLabel="example.js" index="2">
+<position info="not_deleted" x="20954" y="0"/>
+</item>
+<item historyLabel="example.html" index="3"/>
+<item historyLabel="left.html" index="4"/>
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="struts.xml" index="6"/>
+<item historyLabel="DemonstrationAction.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="LoginAction.java" index="1">
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="struts.xml" index="6"/>
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="DemonstrationAction.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="NetworkAction.java" index="2">
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="DemonstrationAction.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SubnetAction.java" index="3">
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="drawLocation.js" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="TopologyAction.java" index="4">
+<item historyLabel="demo.js" index="9">
+<position info="not_deleted" x="309" y="0"/>
+</item>
+<item historyLabel="DemonstrationAction.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="computer.html" index="5"/>
-<item historyLabel="Breakdown-link.jsp" index="6"/>
-<item historyLabel="FlowService.java" index="7">
-<position info="not_deleted" x="2260" y="0"/>
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="demo.js" index="9">
+<position info="not_deleted" x="309" y="0"/>
 </item>
-<item historyLabel="FlowAction.java" index="8">
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="demo.js" index="9">
+<position info="not_deleted" x="309" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="DemonstrationAction.java" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FlowService.java" index="7">
-<position info="not_deleted" x="2260" y="0"/>
-</item>
-<item historyLabel="LoginAction.java" index="9">
+<item historyLabel="Demonstration-node.jsp" index="5"/>
+<item historyLabel="left.html" index="11"/>
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="Demonstration-flow.jsp" index="13"/>
+<item historyLabel="DemonstrationAction.java" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="NetworkAction.java" index="10">
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="Demonstration-flow.jsp" index="13"/>
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="Demonstration-flow.jsp" index="13"/>
+<item historyLabel="DemonstrationAction.java" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SubnetAction.java" index="11">
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="Demonstration-flow.jsp" index="13"/>
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="left.html" index="11"/>
+<item historyLabel="drawLocation.js" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="TopologyAction.java" index="12">
+<item historyLabel="left.html" index="11"/>
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="index.htm" index="16"/>
+<item historyLabel="DemonstrationAction.java" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="computer.html" index="13"/>
-<item historyLabel="TopologyAction.java" index="12">
+<item historyLabel="Demonstration-node.jsp" index="12"/>
+<item historyLabel="index.htm" index="16"/>
+<item historyLabel="DemonstrationAction.java" index="17">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Breakdown-link.jsp" index="14"/>
-<item historyLabel="TopologyAction.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BreakdownAction.java" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="FlowAction.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="LoginAction.java" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="NetworkAction.java" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SubnetAction.java" index="19">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="TopologyAction.java" index="20">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BaseDao.java" index="21">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BaseDaoImpl.java" index="22">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="LinkDaoImpl.java" index="23">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="NetworkDaoImpl.java" index="24">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="NodeDaoImpl.java" index="25">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SubnetDaoImpl.java" index="26">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Link_Network.java" index="27">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Link_Subnet.java" index="28">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Link.java" index="29">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Link_Subnet.java" index="28">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Link.java" index="29">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Network.java" index="30">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Node_Network.java" index="31">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="FlowService.java" index="32">
-<position info="not_deleted" x="2092" y="0"/>
-</item>
-<item historyLabel="basicInformation.sql" index="33">
-<position info="not_deleted" x="133" y="0"/>
-</item>
-<item historyLabel="Breakdown-node.jsp" index="34"/>
-<item historyLabel="Breakdown-link.jsp" index="35"/>
-<item historyLabel="Breakdown-node.jsp" index="34"/>
-<item historyLabel="struts.xml" index="36"/>
-<item historyLabel="Network-show.jsp" index="37"/>
-<item historyLabel="Network-list.jsp" index="38"/>
-<item historyLabel="NetworkAction.java" index="39">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="NetworkAction.java" index="39">
-<position info="not_deleted" x="694" y="0"/>
-</item>
-<item historyLabel="NetworkAction.java" index="39">
-<position info="not_deleted" x="414" y="11"/>
-</item>
-<item historyLabel="FlowService.java" index="40">
-<position info="not_deleted" x="2092" y="0"/>
-</item>
-<item active="true" historyLabel="FlowService.java" index="40">
-<position info="not_deleted" x="160" y="11"/>
-</item>
+<item historyLabel="Demonstration-node.jsp" index="18"/>
+<item active="true" historyLabel="index.htm" index="16"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -685,50 +529,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Network-list.jsp" tooltip="Manager/WebRoot/admin/content/network/Network-list.jsp">
-<persistable path="/Manager/WebRoot/admin/content/network/Network-list.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.htm" tooltip="Manager/WebRoot/admin/content/demonstration/index.htm">
+<persistable path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Network-show.jsp" tooltip="Manager/WebRoot/admin/content/network/Network-show.jsp">
-<persistable path="/Manager/WebRoot/admin/content/network/Network-show.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-flow.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-flow.jsp">
+<persistable path="/Manager/WebRoot/admin/content/demonstration/Demonstration-flow.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="demo.js" tooltip="Manager/WebRoot/admin/js/topology/demo.js">
+<persistable path="/Manager/WebRoot/admin/js/topology/demo.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="drawLocation.js" tooltip="Manager/WebRoot/admin/js/topology/drawLocation.js">
+<persistable path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DemonstrationAction.java" tooltip="Manager/src/action/DemonstrationAction.java">
+<persistable path="/Manager/src/action/DemonstrationAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-node.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp">
+<persistable path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="example.js" tooltip="Manager/WebRoot/admin/extension/BMap/doc/example.js">
+<persistable path="/Manager/WebRoot/admin/extension/BMap/doc/example.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="example.html" tooltip="Manager/WebRoot/admin/extension/BMap/doc/example.html">
+<persistable path="/Manager/WebRoot/admin/extension/BMap/doc/example.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="Manager/src/struts.xml">
 <persistable path="/Manager/src/struts.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-link.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp">
-<persistable path="/Manager/WebRoot/admin/content/breakdown/Breakdown-link.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="bootstrap.css" tooltip="Manager/WebRoot/admin/asset/css/bootstrap.css">
+<persistable path="/Manager/WebRoot/admin/asset/css/bootstrap.css"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Breakdown-node.jsp" tooltip="Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp">
-<persistable path="/Manager/WebRoot/admin/content/breakdown/Breakdown-node.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="map11.html" tooltip="Manager/WebRoot/admin/admin/map11.html">
+<persistable path="/Manager/WebRoot/admin/admin/map11.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" name="basicInformation.sql" tooltip="Manager/src/SQL/basicInformation.sql">
-<persistable path="/Manager/src/SQL/basicInformation.sql"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="left.html" tooltip="Manager/WebRoot/admin/left.html">
+<persistable path="/Manager/WebRoot/admin/left.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" tooltip="Manager/src/service/FlowService.java">
-<persistable path="/Manager/src/service/FlowService.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ActionSupport.class" tooltip="com.opensymphony.xwork2.ActionSupport">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Manager/F:\/973\/ManagerSSH\/Manager\/WebRoot\/WEB-INF\/lib\/xwork-core-2.3.16.1.jar&lt;com.opensymphony.xwork2(ActionSupport.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Node_Network.java" tooltip="Manager/src/model/Node_Network.java">
-<persistable path="/Manager/src/model/Node_Network.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="map11.jsp" tooltip="Manager/WebRoot/admin/admin/map11.jsp">
+<persistable path="/Manager/WebRoot/admin/admin/map11.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Network.java" tooltip="Manager/src/model/Network.java">
-<persistable path="/Manager/src/model/Network.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link.java" tooltip="Manager/src/model/Link.java">
-<persistable path="/Manager/src/model/Link.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link_Subnet.java" tooltip="Manager/src/model/Link_Subnet.java">
-<persistable path="/Manager/src/model/Link_Subnet.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Link_Network.java" tooltip="Manager/src/model/Link_Network.java">
-<persistable path="/Manager/src/model/Link_Network.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubnetDaoImpl.java" tooltip="Manager/src/dao/impl/SubnetDaoImpl.java">
-<persistable path="/Manager/src/dao/impl/SubnetDaoImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NodeDaoImpl.java" tooltip="Manager/src/dao/impl/NodeDaoImpl.java">
-<persistable path="/Manager/src/dao/impl/NodeDaoImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkDaoImpl.java" tooltip="Manager/src/dao/impl/NetworkDaoImpl.java">
-<persistable path="/Manager/src/dao/impl/NetworkDaoImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TopologyAction.java" tooltip="Manager/src/action/TopologyAction.java">
+<persistable path="/Manager/src/action/TopologyAction.java"/>
 </file>
 </mruList>
 </workbench>

@@ -51,6 +51,6 @@
 	</section>
 	<section name="NewJspCreationWizardPage">
 		<item value="Default JSP template" key="templatezh_CN"/>
-		<item value="/Manager/WebRoot/admin" key="filePath"/>
+		<item value="/Manager/WebRoot/admin/content/demonstration" key="filePath"/>
 	</section>
 </section>

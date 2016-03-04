@@ -40,6 +40,11 @@
 	   	   <action name="Breakdown-*" class="action.BreakdownAction" method="{1}">
 	       		<result>/admin/content/breakdown/Breakdown-{1}.jsp</result>	       		
 	       </action>
+	       
+	       <action name="Demonstration-*" class="action.DemonstrationAction" method="{1}">
+	       		<result >/admin/content/demonstration/Demonstration-{1}.jsp</result>
+	           		
+	       </action>
 	      
    		</package>
 </struts>    

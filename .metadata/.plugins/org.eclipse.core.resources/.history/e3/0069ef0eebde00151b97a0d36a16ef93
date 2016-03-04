@@ -1,0 +1,21 @@
+function demo(x,y) {
+	
+	
+	var flowNode=new Array();
+	   for(var j=0;j<=20;j++) {
+		   flowNode[j]=new Array();
+	   }
+	   
+
+	   flowNode[0][0]=1;
+	   flowNode[0][1]=5;
+	   flowNode[0][2]=5;
+	   flowNode[0][3]=4;
+
+	   flowNode[1][0]=4;
+	   flowNode[1][1]=6;
+	   
+	   
+   return flowNode[x][y];
+	
+}

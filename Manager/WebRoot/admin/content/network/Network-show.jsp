@@ -233,10 +233,14 @@ $(document).ready(function(){
 			/*画图时一切以节点或者链路在数据库中的ID来话，标签只是用来读出ID  */
 
 		   var graph = new Q.Graph("canvas");
+		  
 		   for (var i=0;i<nodeSize;i++) {
 		   		var node=document.getElementById(i).innerHTML;
 		   		
-		   		myArray[node] = graph.createNode("节点"+node, drawLocation(20,node,0), drawLocation(20,node,1));
+		   		if(node<=6)
+		   			myArray[node] = graph.createNode("深圳节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1));
+		   		else if(node==7)
+		   		    myArray[node] = graph.createNode("边缘节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1)); 
 		   } 
 		   
 		    	

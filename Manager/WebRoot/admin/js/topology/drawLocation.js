@@ -4,11 +4,28 @@ function drawLocation(x,y,z) {
 	var location=new Array();
 	   for(var j=1;j<=20;j++) {
 	   		location[j]=new Array();
-	   		for(var k=0;k<21;k++) {
+	   		for(var k=0;k<=20;k++) { //k的初始值和结束值不能改动，否则无法运行
 	   			location[j][k]= new Array(2);
 	   		}
 	   }
-
+	   
+	   /*demonstration */
+	   location[7][1][0]=-200;
+	   location[7][1][1]=-150;
+	   location[7][2][0]=200;
+	   location[7][2][1]=-150;
+	   location[7][3][0]=0;
+	   location[7][3][1]=0;
+	   location[7][4][0]=0;
+	   location[7][4][1]=100;
+	   location[7][5][0]=-200;
+	   location[7][5][1]=250;
+	   location[7][6][0]=200;
+	   location[7][6][1]=250;
+	   location[7][7][0]=0;
+	   location[7][7][1]=-250;
+	   /*demonstration */
+	   
 	   /*random */
 	   location[12][0][0]=150;
 	   location[12][0][1]=141;
@@ -36,6 +53,7 @@ function drawLocation(x,y,z) {
 	   location[12][11][1]=-150;
 	   
 	   /*perfect*/
+
 	   location[20][1][0]=-200;
 	   location[20][1][1]=-100;
 	   location[20][2][0]=150;

@@ -1,0 +1,4 @@
+#Thu Feb 05 16:14:19 CST 2015
+eclipse.preferences.version=1
+validator.Checked=src/applicationContext-daos.xml,corechart.I.js,default,src/applicationContext-common.xml,src/applicationContext-services.xml,WebRoot/content/js/format+zh_CN,WebRoot/WEB-INF/admin/js/format+zh_CN,WebRoot/WEB-INF/content/js/format+zh_CN,WebRoot/admin/content/subnet/js/jquery-1.8.3.min.js,WebRoot/admin/js,src/applicationContext-actions.xml
+validator.Unchecked=
