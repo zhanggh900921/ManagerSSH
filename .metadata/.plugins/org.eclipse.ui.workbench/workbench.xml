@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="65" version="2.0">
+<workbench progressCount="40" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="75" y="75">
 <fastViewData fastViewLocation="1024"/>
@@ -21,7 +21,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -38,7 +38,7 @@
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="342" y="22"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -54,6 +54,12 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
@@ -64,15 +70,37 @@
 <editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="F:/973/ManagerSSH/Manager/src/struts.xml" title="struts.xml" tooltip="Manager/src/struts.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/struts.xml"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-node.jsp" partName="Demonstration-node.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" title="Demonstration-node.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-node.jsp" partName="Demonstration-node.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" title="Demonstration-node.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DemonstrationAction.java" partName="DemonstrationAction.java" path="F:/973/ManagerSSH/Manager/src/action/DemonstrationAction.java" title="DemonstrationAction.java" tooltip="Manager/src/action/DemonstrationAction.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/DemonstrationAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="704" selectionTopPixel="284"/>
 </editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.htm" partName="index.htm" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/index.htm" title="index.htm" tooltip="Manager/WebRoot/admin/content/demonstration/index.htm" workbook="DefaultEditorWorkbook">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.htm" partName="index.htm" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/demonstration/index.htm" title="index.htm" tooltip="Manager/WebRoot/admin/content/demonstration/index.htm" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
+</editor>
+<editor id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" name="demonstration.sql" partName="demonstration.sql" path="F:/973/ManagerSSH/Manager/src/SQL/demonstration.sql" title="demonstration.sql" tooltip="Manager/src/SQL/demonstration.sql" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/SQL/demonstration.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7337" selectionTopPixel="791"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="drawLocation.js" partName="drawLocation.js" path="F:/973/ManagerSSH/Manager/WebRoot/admin/js/topology/drawLocation.js" title="drawLocation.js" tooltip="Manager/WebRoot/admin/js/topology/drawLocation.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1634" selectionTopPixel="850"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Topology-add.jsp" partName="Topology-add.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/topology/Topology-add.jsp" title="Topology-add.jsp" tooltip="Manager/WebRoot/admin/content/topology/Topology-add.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/topology/Topology-add.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowAction.java" partName="FlowAction.java" path="F:/973/ManagerSSH/Manager/src/action/FlowAction.java" title="FlowAction.java" tooltip="Manager/src/action/FlowAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/action/FlowAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" partName="FlowService.java" path="F:/973/ManagerSSH/Manager/src/service/FlowService.java" title="FlowService.java" tooltip="Manager/src/service/FlowService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/src/service/FlowService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="3388"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Topology-delete.jsp" partName="Topology-delete.jsp" path="F:/973/ManagerSSH/Manager/WebRoot/admin/content/topology/Topology-delete.jsp" title="Topology-delete.jsp" tooltip="Manager/WebRoot/admin/content/topology/Topology-delete.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Manager/WebRoot/admin/content/topology/Topology-delete.jsp"/>
 </editor>
 </editors>
 <views>
@@ -258,7 +286,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2195122" ratioLeft="297" ratioRight="1056" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1718177" ratioLeft="328" ratioRight="1581" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@d1cfd52" ratio="0.75" ratioLeft="600" ratioRight="200" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -408,116 +436,123 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/extension/BMap/doc/example.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/extension/BMap/doc/example.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/extension/BMap/doc/example.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/Manager/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/demo.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/left.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/topology/Topology-add.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/topology/Topology-delete.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node2.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-flow.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/DemonstrationAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" path="/Manager/src/SQL/demonstration.sql"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/service/FlowService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Manager/src/action/FlowAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/topology/Topology-add.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node.jsp"/>
 </editors>
-<item historyLabel="left.html" index="0">
-<position info="not_deleted" x="2947" y="0"/>
-</item>
-<item historyLabel="example.html" index="1"/>
-<item historyLabel="example.js" index="2">
-<position info="not_deleted" x="20954" y="0"/>
-</item>
-<item historyLabel="example.html" index="3"/>
-<item historyLabel="example.js" index="2">
-<position info="not_deleted" x="20954" y="0"/>
-</item>
-<item historyLabel="example.html" index="3"/>
-<item historyLabel="left.html" index="4"/>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="struts.xml" index="6"/>
-<item historyLabel="DemonstrationAction.java" index="7">
+<item historyLabel="Demonstration-node.jsp" index="0"/>
+<item historyLabel="Topology-add.jsp" index="1"/>
+<item historyLabel="Topology-delete.jsp" index="2"/>
+<item historyLabel="Topology-add.jsp" index="1"/>
+<item historyLabel="Topology-delete.jsp" index="2"/>
+<item historyLabel="Demonstration-node2.jsp" index="3"/>
+<item historyLabel="Topology-delete.jsp" index="2"/>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="struts.xml" index="6"/>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="DemonstrationAction.java" index="7">
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="DemonstrationAction.java" index="7">
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="2548" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="2548" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="2548" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="2548" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6005" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6053" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6053" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6589" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6639" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="6838" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7037" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="demonstration.sql" index="5">
+<position info="not_deleted" x="7337" y="0"/>
+</item>
+<item historyLabel="Demonstration-node.jsp" index="4"/>
+<item historyLabel="FlowService.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="drawLocation.js" index="8">
+<item historyLabel="FlowAction.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="demo.js" index="9">
-<position info="not_deleted" x="309" y="0"/>
-</item>
-<item historyLabel="DemonstrationAction.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="demo.js" index="9">
-<position info="not_deleted" x="309" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="demo.js" index="9">
-<position info="not_deleted" x="309" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="DemonstrationAction.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="5"/>
-<item historyLabel="left.html" index="11"/>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="Demonstration-flow.jsp" index="13"/>
-<item historyLabel="DemonstrationAction.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="Demonstration-flow.jsp" index="13"/>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="Demonstration-flow.jsp" index="13"/>
-<item historyLabel="DemonstrationAction.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="Demonstration-flow.jsp" index="13"/>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="left.html" index="11"/>
-<item historyLabel="drawLocation.js" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="left.html" index="11"/>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="index.htm" index="16"/>
-<item historyLabel="DemonstrationAction.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="12"/>
-<item historyLabel="index.htm" index="16"/>
-<item historyLabel="DemonstrationAction.java" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Demonstration-node.jsp" index="18"/>
-<item active="true" historyLabel="index.htm" index="16"/>
+<item historyLabel="Topology-add.jsp" index="8"/>
+<item active="true" historyLabel="Demonstration-node.jsp" index="9"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topleft"/>
+<trimItem IMemento.internal.id="bottomleft"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@d1cfd52"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@6a3b1937"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -525,10 +560,32 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Demonstration-node2.jsp" tooltip="Manager/WebRoot/admin/content/demonstration/Demonstration-node2.jsp">
+<persistable path="/Manager/WebRoot/admin/content/demonstration/Demonstration-node2.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Topology-delete.jsp" tooltip="Manager/WebRoot/admin/content/topology/Topology-delete.jsp">
+<persistable path="/Manager/WebRoot/admin/content/topology/Topology-delete.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowService.java" tooltip="Manager/src/service/FlowService.java">
+<persistable path="/Manager/src/service/FlowService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FlowAction.java" tooltip="Manager/src/action/FlowAction.java">
+<persistable path="/Manager/src/action/FlowAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Topology-add.jsp" tooltip="Manager/WebRoot/admin/content/topology/Topology-add.jsp">
+<persistable path="/Manager/WebRoot/admin/content/topology/Topology-add.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="drawLocation.js" tooltip="Manager/WebRoot/admin/js/topology/drawLocation.js">
+<persistable path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" name="demonstration.sql" tooltip="Manager/src/SQL/demonstration.sql">
+<persistable path="/Manager/src/SQL/demonstration.sql"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="index.htm" tooltip="Manager/WebRoot/admin/content/demonstration/index.htm">
 <persistable path="/Manager/WebRoot/admin/content/demonstration/index.htm"/>
 </file>
@@ -537,9 +594,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="demo.js" tooltip="Manager/WebRoot/admin/js/topology/demo.js">
 <persistable path="/Manager/WebRoot/admin/js/topology/demo.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="drawLocation.js" tooltip="Manager/WebRoot/admin/js/topology/drawLocation.js">
-<persistable path="/Manager/WebRoot/admin/js/topology/drawLocation.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DemonstrationAction.java" tooltip="Manager/src/action/DemonstrationAction.java">
 <persistable path="/Manager/src/action/DemonstrationAction.java"/>
@@ -555,24 +609,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="Manager/src/struts.xml">
 <persistable path="/Manager/src/struts.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="bootstrap.css" tooltip="Manager/WebRoot/admin/asset/css/bootstrap.css">
-<persistable path="/Manager/WebRoot/admin/asset/css/bootstrap.css"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="map11.html" tooltip="Manager/WebRoot/admin/admin/map11.html">
-<persistable path="/Manager/WebRoot/admin/admin/map11.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="left.html" tooltip="Manager/WebRoot/admin/left.html">
-<persistable path="/Manager/WebRoot/admin/left.html"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ActionSupport.class" tooltip="com.opensymphony.xwork2.ActionSupport">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Manager/F:\/973\/ManagerSSH\/Manager\/WebRoot\/WEB-INF\/lib\/xwork-core-2.3.16.1.jar&lt;com.opensymphony.xwork2(ActionSupport.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="map11.jsp" tooltip="Manager/WebRoot/admin/admin/map11.jsp">
-<persistable path="/Manager/WebRoot/admin/admin/map11.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TopologyAction.java" tooltip="Manager/src/action/TopologyAction.java">
-<persistable path="/Manager/src/action/TopologyAction.java"/>
 </file>
 </mruList>
 </workbench>

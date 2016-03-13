@@ -142,23 +142,75 @@ $(document).ready(function(){
     
     
     
-    <script type="text/javascript">		 
+    <script type="text/javascript">		
+    	   
+    	 var nodeNames =new Array("","深圳节点1","深圳节点2","深圳节点3","深圳节点4","深圳节点5","深圳节点6","深圳边缘节点"
+    	                            ,"北京节点1","北京节点2","北京节点3","北京节点4","北京节点5","北京节点6","北京边缘节点"
+		                            ,"郑州节点","长沙节点","上海节点"
+		                         )		
+		
+		var linkMapping = new Array(
+									{"id":1,"from":1,"to":3},
+									{"id":2,"from":2,"to":3},
+									{"id":3,"from":3,"to":4},
+									{"id":4,"from":1,"to":5},
+									{"id":5,"from":2,"to":6},
+									{"id":6,"from":4,"to":5},
+									{"id":7,"from":4,"to":6},
+									{"id":8,"from":1,"to":7},
+									{"id":9,"from":2,"to":7},
+									{"id":10,"from":9,"to":11},
+									{"id":11,"from":9,"to":10},
+									{"id":12,"from":10,"to":14},
+									{"id":13,"from":8,"to":14},
+									{"id":14,"from":13,"to":14},
+									{"id":15,"from":12,"to":13},
+									{"id":16,"from":8,"to":12},
+									{"id":17,"from":11,"to":12},
+									{"id":18,"from":8,"to":9},
+									{"id":19,"from":14,"to":15},
+									{"id":20,"from":15,"to":17},
+									{"id":21,"from":15,"to":16},
+									{"id":22,"from":16,"to":17},
+									{"id":23,"from":7,"to":16});
+    	   
+    	   
+    	   var nodeSize = '<s:property value="nodes.size"/>';
+		   var linkSize = '<s:property value="links.size"/>';
+		   var myNode=new Array(24);
+		   var myLinks=new Array(24);
+		   var newLinks=new Array(24);
+		   var myPath = new Array({"from":2,"to":3,"type":2,"id":2}); //初始化
+		   
+		   var path1 = new Array({"from":9,"to":8,"type":3,"id":18},
+		                        {"from":8,"to":14,"type":3,"id":13},
+		                        {"from":14,"to":15,"type":1,"id":19},
+		                        {"from":15,"to":16,"type":1,"id":21},
+		                        {"from":16,"to":7,"type":1,"id":23},
+		                        {"from":7,"to":1,"type":2,"id":8},
+		                        {"from":1,"to":5,"type":2,"id":4},
+		                        {"from":5,"to":4,"type":2,"id":6},
+		                        {"from":4,"to":6,"type":2,"id":7}
+		                       );
+		                  
+		    var path2 = new Array({"from":9,"to":8,"type":3,"id":18},
+		                        {"from":8,"to":14,"type":3,"id":13},
+		                        {"from":14,"to":15,"type":1,"id":19},
+		                        {"from":15,"to":16,"type":1,"id":21},
+		                        {"from":16,"to":7,"type":1,"id":23},
+		                        {"from":7,"to":2,"type":2,"id":9},
+		                        {"from":2,"to":6,"type":2,"id":5}
+		                       ); 
+
 		
 		$(function(){
 			
-		   var nodeSize = '<s:property value="nodes.size"/>';
-		   var linkSize = '<s:property value="links.size"/>';
-		   var myArray=new Array(21);
-		   var myLinks=new Array(21);
 		 
 
 		   var graph = new Q.Graph("canvas");
-		   for (var i=0;i<nodeSize;i++) {
+		   for (var i=0;i<nodeSize;i++) {   //创建节点
 		   		var node=document.getElementById(i).innerHTML;
-		   		if(node<=6)
-		   			myArray[node] = graph.createNode("深圳节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1));
-		   		else if(node==7)
-		   		    myArray[node] = graph.createNode("边缘节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1)); 
+		   		myNode[node] = graph.createNode(nodeNames[node], drawLocation(nodeSize,node, 0), drawLocation(nodeSize, node, 1));
 		   } 
 		   
 		   	function createEdge(name, from, to, type, lineWidth, color){
@@ -176,54 +228,87 @@ $(document).ready(function(){
 			    edge.setStyle(Q.Styles.LABEL_PADDING, new Q.Insets(2, 5));
 			    edge.setStyle(Q.Styles.LABEL_BACKGROUND_GRADIENT,
 			            Q.Gradient.LINEAR_GRADIENT_VERTICAL);
+			    
 				return edge;
 			}   
 			
-		
-		   var myLinkNum=0;
-		   var flowNodeX=0;
-		   var flowNodeY=0;
 		   
-   		   for (var m=0;m<linkSize;m++) {
+   		   for (var m=0;m<linkSize;m++) { //创建链路
    		  		
 	   		  	var node0=document.getElementById(m+"_0").innerHTML;
    		  		var node1=document.getElementById(m+"_1").innerHTML;
    		  		
-   		  		if(node0==1 && node1==5) {
-   		  			var edge1 = createEdge("内容数据传输", myArray[node0], myArray[node1], null, 4, "red");
-   		  			myLinks[myLinkNum] = edge1;
-   		  			myLinkNum = myLinkNum+1;
-   		  		}
-   		  		else if(node0==4 && node1==5) {
-   		  			var edge1 = createEdge("身份数据传输", myArray[node1], myArray[node0], null, 4, "green");
-   		  			myLinks[myLinkNum] = edge1;
-   		  			myLinkNum = myLinkNum+1;
-   		  		}
-   		  		else if(node0==4 && node1==6) {
-   		  			var edge1 = createEdge("服务数据传输", myArray[node0], myArray[node1], null, 4, "blue");
-   		  			myLinks[myLinkNum] = edge1;
-   		  			myLinkNum = myLinkNum+1;
-   		  		}
    		  		
-   		  		
-   		  		else{
-   		  			var edge = graph.createEdge("", myArray[node0], myArray[node1]);  
-   		  			var edge = graph.createEdge("", myArray[node1], myArray[node0]); 
-   		  		} 
+   		  		var edge = graph.createEdge("", myNode[node0], myNode[node1]);  
+   		  			edge.setStyle(Q.Styles.ARROW_TO_SIZE, 0);
+   		  		    myLinks[m+1] = edge;	
+   		  		 
    		   } 
    		   
-	 		var offset = 0;
+   		   	var offset = 0;
 			var index = 0;
 			var timer = setInterval(function(){
 				offset += -1;
 				index++;
 				index = index%20;
-				for(var q=0; q<myLinkNum; q++)
-					myLinks[q].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.02 * (20 - index));
+				for(var q=0; q<linkSize; q++)
+					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
 			}, 150);
+   		   
+   		   function buildPath(path) {
+				for(var i=0;i<myPath.length;i++){
+					graph.graphModel.remove(myLinks[myPath[i].id]);
+		  			var edge = graph.createEdge("", myNode[myPath[i].from], myNode[myPath[i].to]); 
+					edge.setStyle(Q.Styles.ARROW_TO_SIZE, 0);					
+		  			myLinks[myPath[i].id] = edge;
+				}
+				myPath = new Array(path.length);
+				for(var i=0;i<path.length;i++){
+					myPath[i] = path[i];
+					if(path[i].type==1){
+						graph.graphModel.remove(myLinks[path[i].id]);
+						var edge1 = createEdge("地址数据传输", myNode[path[i].from], myNode[path[i].to], null, 4, "red");
+						myLinks[path[i].id] = edge1;
+					}
+					else if(path[i].type==2){
+						graph.graphModel.remove(myLinks[path[i].id]);
+						var edge1 = createEdge("内容数据传输", myNode[path[i].from], myNode[path[i].to], null, 4, "green");
+						myLinks[path[i].id] = edge1;
+					}
+					else if(path[i].type==3){
+						graph.graphModel.remove(myLinks[path[i].id]);
+						var edge1 = createEdge("身份数据传输", myNode[path[i].from], myNode[path[i].to], null, 4, "blue");
+						myLinks[path[i].id] = edge1;
+					}
+					else if(path[i].type==4){
+						graph.graphModel.remove(myLinks[path[i].id]);
+						var edge1 = createEdge("服务数据传输", myNode[path[i].from], myNode[path[i].to], null, 4, "orange");
+						myLinks[path[i].id] = edge1;
+					}
+					
+				}
+			}
+   		 
+    		  var flag=1;
+
+    	   var timer2 = setInterval(function() {
+
+				if(flag==1) {
+					buildPath(path1);
+					flag=2;
+				}
+				else if(flag==2) {
+					buildPath(path2);
+					flag=1;
+				}
+
+			}, 5000);   
+
+
 	
 			function destroy(){
 				clearInterval(timer);
+				clearInterval(timer2);
 			}
    		  
  

@@ -36,6 +36,13 @@ public class DemonstrationAction extends ActionSupport{
 		return SUCCESS;
 	}
 	
+	public String node2() {
+		nodes = topologyService.nodeList();
+		links = topologyService.linkList();
+		
+		return SUCCESS;
+	}
+	
 
 	
 	public String add() {

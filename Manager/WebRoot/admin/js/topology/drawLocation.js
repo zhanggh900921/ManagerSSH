@@ -26,6 +26,46 @@ function drawLocation(x,y,z) {
 	   location[7][7][1]=-250;
 	   /*demonstration */
 	   
+	   /*demonstration2 */
+	   location[17][1][0]=0;
+	   location[17][1][1]=-50;
+	   location[17][2][0]=400;
+	   location[17][2][1]=-50;
+	   location[17][3][0]=200;
+	   location[17][3][1]=100;
+	   location[17][4][0]=200;
+	   location[17][4][1]=200;
+	   location[17][5][0]=0;
+	   location[17][5][1]=350;
+	   location[17][6][0]=400;
+	   location[17][6][1]=350;
+	   location[17][7][0]=200;
+	   location[17][7][1]=-150;
+	   
+	   location[17][8][0]=-400;
+	   location[17][8][1]=50;
+	   location[17][9][0]=-550;
+	   location[17][9][1]=200;
+	   location[17][10][0]=-550;
+	   location[17][10][1]=50;
+	   location[17][11][0]=-400;
+	   location[17][11][1]=350;
+	   location[17][12][0]=-250;
+	   location[17][12][1]=200;
+	   location[17][13][0]=-250;
+	   location[17][13][1]=50;
+	   location[17][14][0]=-400;
+	   location[17][14][1]=-100;
+	   
+	   location[17][15][0]=-250;
+	   location[17][15][1]=-200;
+	   location[17][16][0]=-50;
+	   location[17][16][1]=-200;
+	   location[17][17][0]=-150;
+	   location[17][17][1]=-300;
+
+	   /*demonstration2 */
+	   
 	   /*random */
 	   location[12][0][0]=150;
 	   location[12][0][1]=141;
