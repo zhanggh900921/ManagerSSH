@@ -17,6 +17,7 @@
 			<th scope="col" style="font-size: large; ">身份</th>
 			<th scope="col" style="font-size: large; ">地址</th>
 			<th scope="col" style="font-size: large; ">服务</th>
+			<th scope="col" style="font-size: large; ">总流量</th>
 
 		</tr>
 	</thead>
@@ -28,6 +29,7 @@
  			<td style="font-size: large; "><s:property value="#n.idnFlow"/></td>
 			<td style="font-size: large; "><s:property value="#n.ianFlow"/></td>
 			<td style="font-size: large; "><s:property value="#n.isnFlow"/></td>
+			<td style="font-size: large; "><s:property value="#n.sum"/></td>
 		
 		</tr>
 		

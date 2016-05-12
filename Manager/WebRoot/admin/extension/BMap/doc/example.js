@@ -499,15 +499,9 @@
                             }
                         },
                         data : [
-                            [{name:'深圳'},{name:'福州',value:95}],
-                            [{name:'深圳'},{name:'太原',value:90}],
-                            [{name:'深圳'},{name:'长春',value:80}],
-                            [{name:'深圳'},{name:'重庆',value:70}],
-                            [{name:'深圳'},{name:'西安',value:60}],
-                            [{name:'深圳'},{name:'成都',value:50}],
-                            [{name:'深圳'},{name:'常州',value:40}],
-                            [{name:'深圳'},{name:'北京',value:30}],
-                            [{name:'深圳'},{name:'北海',value:20}]
+                            [{name:'北京'},{name:'郑州',value:90}],
+                            [{name:'郑州'},{name:'长沙',value:50}],
+                            [{name:'长沙'},{name:'深圳',value:20}]
                             
                         ]
                     },
@@ -526,15 +520,10 @@
                             }
                         },
                         data : [
-                            {name:'福州',value:95},
-                            {name:'太原',value:90},
-                            {name:'长春',value:80},
-                            {name:'重庆',value:70},
-                            {name:'西安',value:60},
-                            {name:'成都',value:50},
-                            {name:'常州',value:40},
-                            {name:'北京',value:30},
-                            {name:'北海',value:20}
+                            {name:'郑州',value:90},
+                            {name:'长沙',value:50},
+                            {name:'深圳',value:20}
+
                             
                         ]
                     }
@@ -556,7 +545,7 @@
                             }
                         },
                         data : [
-                            [{name:'北京'},{name:'包头'}],
+/*                            [{name:'北京'},{name:'包头'}],
                             [{name:'北京'},{name:'北海'}],
                             [{name:'北京'},{name:'广州'}],
                             [{name:'北京'},{name:'郑州'}],
@@ -705,7 +694,7 @@
                             [{name:'广州'},{name:'西宁'}],
                             [{name:'广州'},{name:'徐州'}],
                             [{name:'广州'},{name:'烟台'}],
-                            [{name:'广州'},{name:'盐城'}]
+                            [{name:'广州'},{name:'盐城'}]*/
                         ]
                     }
                 }

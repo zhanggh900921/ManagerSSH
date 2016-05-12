@@ -42,6 +42,7 @@ public class FlowAction extends ActionSupport{
 	}
 	
 	public String node() {
+		flowService.nodesFlowUpdate();
 		nodes = flowService.get();
 		
 		return SUCCESS;

@@ -215,42 +215,119 @@ $(document).ready(function(){
     
     
     
-    <script type="text/javascript">		 
+   <script type="text/javascript">		
+    	   
+    	 var nodeNames =new Array("","/router/pku/n3","/router/pku/n1","/router/pku/n2","/router/main/n3","/router/main/n4","/router/main/n1",
+    	 							"/router/main/n2","/router/hit/n1","/router/hit/n3","/router/hit/n2", "/router/sz/n0","/router/sz/n1",
+    	 							"/router/sz/n6","/router/sz/n2","/router/sz/n3","/router/sz/n5","/router/sz/n4","/router/main/n5",
+    	                            "/router/main/n6"
+		                         )		
 		
-		window.onload =	function(){
+   	   
+    	   
+    	   var nodeSize = '<s:property value="nodes.size"/>';
+		   var linkSize = '<s:property value="links.size"/>';
+		   var myNode=new Array(24);
+		   var myLinks=new Array(24);
+		   var newLinks=new Array(24);
+
+
+		
+		$(function(){
 			
-		   var nodeSize = '<s:property value="subnet.nodes.size"/>';
-		   var linkSize = '<s:property value="subnet.links.size"/>';
-		   
-		   var myArray=new Array(21);
-		   
-			/*画图时一切以节点或者链路在数据库中的ID来话，标签只是用来读出ID  */
+		 
 
 		   var graph = new Q.Graph("canvas");
-		   for (var i=0;i<nodeSize;i++) {
+		   for (var i=0;i<nodeSize;i++) {   //创建节点
 		   		var node=document.getElementById(i).innerHTML;
-		   		
-if(node<=6)
-		   			myArray[node] = graph.createNode("深圳节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1));
-		   		else if(node==7)
-		   		    myArray[node] = graph.createNode("边缘节点"+node, drawLocation(nodeSize,node,0), drawLocation(nodeSize,node,1)); 		   } 
+		   		//alert(nodeNames[node]);
+		   		myNode[node] = graph.createNode(nodeNames[node], drawLocation(nodeSize,node, 0), drawLocation(nodeSize, node, 1));
+		   } 
 		   
-		    	
-   		   for (var m=0;m<linkSize;m++) {
+		   function createText(host, name, x, y, anchorPosition, w, h, fontSize, fontColor, backgroundColor){//文字框函数
+			    var text = graph.createText(name, x, y);
+			    text.setStyle(Q.Styles.LABEL_BORDER, 0.5);
+			    text.setStyle(Q.Styles.LABEL_PADDING, 5);
+			    text.setStyle(Q.Styles.LABEL_BORDER_STYLE, "#1D4876");
+			    text.tooltipType = "text";
+			    if(host){
+			        text.host = text.parent = host;
+			    }
+			    if(anchorPosition){
+			        text.anchorPosition = anchorPosition;
+			        text.setStyle(Q.Styles.LABEL_ALIGN_POSITION, anchorPosition);
+			    }
+			    if(w && h){
+			        text.setStyle(Q.Styles.LABEL_SIZE, new Q.Size(w, h));
+			    }
+			
+			    text.setStyle(Q.Styles.LABEL_FONT_SIZE, fontSize || 14);
+			    text.setStyle(Q.Styles.LABEL_COLOR, fontColor || "#555");
+			    text.setStyle(Q.Styles.LABEL_BACKGROUND_COLOR, backgroundColor || "#FFF");
+			
+			    return text;
+			}
+			
+
+		   
+		   	function createEdge(name, from, to, type, lineWidth, color){
+				var edge = graph.createEdge(name, from, to);
+				edge.setStyle(Q.Styles.EDGE_COLOR, color || "#000");
+				edge.setStyle(Q.Styles.EDGE_WIDTH, lineWidth || 2);
+				edge.edgeType = type || Q.Consts.EDGE_TYPE_DEFAULT;
+				edge.setStyle(Q.Styles.EDGE_LINE_DASH, [2, 1]);
+				edge.setStyle(Q.Styles.ARROW_TO_LINE_DASH, [2, 1]);
+				edge.setStyle(Q.Styles.LABEL_OFFSET_Y, -10);
+			    edge.setStyle(Q.Styles.LABEL_POSITION, Q.Position.CENTER_TOP);
+			    edge.setStyle(Q.Styles.LABEL_ANCHOR_POSITION, Q.Position.CENTER_BOTTOM);
+			    edge.setStyle(Q.Styles.LABEL_BORDER, 2);
+			    edge.setStyle(Q.Styles.LABEL_POINTER, true);
+			    edge.setStyle(Q.Styles.LABEL_PADDING, new Q.Insets(2, 5));
+			    edge.setStyle(Q.Styles.LABEL_BACKGROUND_GRADIENT,
+			            Q.Gradient.LINEAR_GRADIENT_VERTICAL);
+			    
+				return edge;
+			}   
+			
+			function groupStyle(group){
+				group.setStyle(Q.Styles.GROUP_BACKGROUND_COLOR, Q.toColor(0xCCfcfb9b));
+				group.setStyle(Q.Styles.GROUP_BACKGROUND_GRADIENT, Q.Gradient.LINEAR_GRADIENT_HORIZONTAL);
+				group.setStyle(Q.Styles.GROUP_STROKE, 2);
+				group.setStyle(Q.Styles.GROUP_STROKE_STYLE, "#2898E0");
+				group.setStyle(Q.Styles.GROUP_STROKE_LINE_DASH, [3,2]);
+			}
+		   
+   		   for (var m=0;m<linkSize;m++) { //创建链路
    		  		
 	   		  	var node0=document.getElementById(m+"_0").innerHTML;
    		  		var node1=document.getElementById(m+"_1").innerHTML;
    		  		
    		  		
-   		  		var edge = graph.createEdge("", myArray[node0], myArray[node1]);  
-   		  		var edge = graph.createEdge("", myArray[node1], myArray[node0]);
-   		  		  
-   		  } 
-		   
+   		  		var edge = graph.createEdge("", myNode[node0], myNode[node1]);  
+   		  			edge.setStyle(Q.Styles.ARROW_TO_SIZE, 0);
+   		  		    myLinks[m+1] = edge;	
+   		  		 
+   		   } 
+   		   
+   		   	var offset = 0;
+			var index = 0;
+			var timer = setInterval(function(){
+				offset += -1;
+				index++;
+				index = index%20;
+				for(var q=0; q<linkSize; q++)
+					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
+			}, 150);
+			
+			
+   		   
+
+   		  
+ 
    		
-		  }
+		  })
 		 
-    </script> 
+    </script>
 
     <div id="canvas" style="width: 1400px; height: 800px; margin: auto; border: solid 1px #2898E0;"></div>
     

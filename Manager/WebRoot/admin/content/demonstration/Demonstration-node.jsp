@@ -142,14 +142,15 @@ $(document).ready(function(){
     
     
     
-    <script type="text/javascript">		
+   <script type="text/javascript">		
     	   
-    	 var nodeNames =new Array("","深圳节点1","深圳节点2","深圳节点3","深圳节点4","深圳节点5","深圳节点6","深圳边缘节点"
-    	                            ,"北京节点1","北京节点2","北京节点3","北京节点4","北京节点5","北京节点6","北京边缘节点"
-		                            ,"郑州节点","长沙节点","上海节点"
+    	 var nodeNames =new Array("","/router/pku/n3","/router/pku/n1","/router/pku/n2","/router/main/n3","/router/main/n4","/router/main/n1",
+    	 							"/router/main/n2","/router/hit/n1","/router/hit/n3","/router/hit/n2", "/router/sz/n0","/router/sz/n1",
+    	 							"/router/sz/n6","/router/sz/n2","/router/sz/n3","/router/sz/n5","/router/sz/n4","/router/main/n5",
+    	                            "/router/main/n6"
 		                         )		
 		
-		var linkMapping = new Array(
+		var linkMapping = new Array(// no use
 									{"id":1,"from":1,"to":3},
 									{"id":2,"from":2,"to":3},
 									{"id":3,"from":3,"to":4},
@@ -210,8 +211,35 @@ $(document).ready(function(){
 		   var graph = new Q.Graph("canvas");
 		   for (var i=0;i<nodeSize;i++) {   //创建节点
 		   		var node=document.getElementById(i).innerHTML;
+		   		//alert(nodeNames[node]);
 		   		myNode[node] = graph.createNode(nodeNames[node], drawLocation(nodeSize,node, 0), drawLocation(nodeSize, node, 1));
 		   } 
+		   
+		   function createText(host, name, x, y, anchorPosition, w, h, fontSize, fontColor, backgroundColor){//文字框函数
+			    var text = graph.createText(name, x, y);
+			    text.setStyle(Q.Styles.LABEL_BORDER, 0.5);
+			    text.setStyle(Q.Styles.LABEL_PADDING, 5);
+			    text.setStyle(Q.Styles.LABEL_BORDER_STYLE, "#1D4876");
+			    text.tooltipType = "text";
+			    if(host){
+			        text.host = text.parent = host;
+			    }
+			    if(anchorPosition){
+			        text.anchorPosition = anchorPosition;
+			        text.setStyle(Q.Styles.LABEL_ALIGN_POSITION, anchorPosition);
+			    }
+			    if(w && h){
+			        text.setStyle(Q.Styles.LABEL_SIZE, new Q.Size(w, h));
+			    }
+			
+			    text.setStyle(Q.Styles.LABEL_FONT_SIZE, fontSize || 14);
+			    text.setStyle(Q.Styles.LABEL_COLOR, fontColor || "#555");
+			    text.setStyle(Q.Styles.LABEL_BACKGROUND_COLOR, backgroundColor || "#FFF");
+			
+			    return text;
+			}
+			
+
 		   
 		   	function createEdge(name, from, to, type, lineWidth, color){
 				var edge = graph.createEdge(name, from, to);
@@ -232,6 +260,13 @@ $(document).ready(function(){
 				return edge;
 			}   
 			
+			function groupStyle(group){
+				group.setStyle(Q.Styles.GROUP_BACKGROUND_COLOR, Q.toColor(0xCCfcfb9b));
+				group.setStyle(Q.Styles.GROUP_BACKGROUND_GRADIENT, Q.Gradient.LINEAR_GRADIENT_HORIZONTAL);
+				group.setStyle(Q.Styles.GROUP_STROKE, 2);
+				group.setStyle(Q.Styles.GROUP_STROKE_STYLE, "#2898E0");
+				group.setStyle(Q.Styles.GROUP_STROKE_LINE_DASH, [3,2]);
+			}
 		   
    		   for (var m=0;m<linkSize;m++) { //创建链路
    		  		
@@ -254,6 +289,51 @@ $(document).ready(function(){
 				for(var q=0; q<linkSize; q++)
 					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
 			}, 150);
+			
+			var text1 = createText(null, "朱老师实验室", 0, -80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group1 = graph.createGroup("G1");
+			group1.addChild(myNode[1]);
+			group1.addChild(myNode[2]);
+			group1.addChild(myNode[3]);
+			group1.addChild(text1);
+			groupStyle(group1);	
+			
+			
+			var text2 = createText(null, "北大节点AS1", 350, -30, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group2 = graph.createGroup("G2");
+			group2.addChild(myNode[4]);
+			group2.addChild(myNode[5]);
+			group2.addChild(myNode[6]);
+			group2.addChild(myNode[7]);
+			group2.addChild(myNode[18]);
+			group2.addChild(myNode[19]);
+			group2.addChild(text2);
+			groupStyle(group2);	
+			
+			var text3 = createText(null, "哈工大节点", -330, -300, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group3 = graph.createGroup("G3");
+			group3.addChild(myNode[8]);
+			group3.addChild(myNode[9]);
+			group3.addChild(myNode[10]);
+			group3.addChild(text3);
+			groupStyle(group3);	
+			
+			var text4 = createText(null, "北大节点AS3", -450, 250, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group4 = graph.createGroup("G4");
+			group4.addChild(myNode[11]);
+			group4.addChild(myNode[13]);
+			group4.addChild(myNode[14]);
+			group4.addChild(text4);
+			groupStyle(group4);	
+			
+			var text5 = createText(null, "北大节点AS2", -110, 80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group5 = graph.createGroup("G5");
+			group5.addChild(myNode[12]);
+			group5.addChild(myNode[15]);
+			group5.addChild(myNode[16]);
+			group5.addChild(myNode[17]);
+			group5.addChild(text5);
+			groupStyle(group5);	
    		   
    		   function buildPath(path) {
 				for(var i=0;i<myPath.length;i++){
@@ -294,11 +374,11 @@ $(document).ready(function(){
     	   var timer2 = setInterval(function() {
 
 				if(flag==1) {
-					buildPath(path1);
+					//buildPath(path1);
 					flag=2;
 				}
 				else if(flag==2) {
-					buildPath(path2);
+					//buildPath(path2);
 					flag=1;
 				}
 

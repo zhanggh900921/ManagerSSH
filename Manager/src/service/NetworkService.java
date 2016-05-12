@@ -32,7 +32,7 @@ public class NetworkService {
 		return networkDaoImpl.get(Network.class, network_id); 		
 	}
 	
-	public void addNode(int network_id, int node_id) {
+	public void addNode(int network_id, int node_id) {//根据多态网络和节点ID增添节点
 		
 		Network network = networkDaoImpl.get(Network.class, network_id);
 		Node node = nodeDaoImpl.get(Node.class, node_id);
@@ -40,21 +40,21 @@ public class NetworkService {
 		networkDaoImpl.update(network);
 	}
 	
-	public void deleteNode(int network_id, int node_id) {
+	public void deleteNode(int network_id, int node_id) {//根据多态网络和节点ID删除节点
 		Network network = networkDaoImpl.get(Network.class, network_id);
 		Node node = nodeDaoImpl.get(Node.class, node_id);
 		network.getNodes().remove(node);
 		networkDaoImpl.update(network);
 	}
 	
-	public Set<Node> getNodes(int network_id) {
+	public Set<Node> getNodes(int network_id) {//将某种多态网络中的节点全部取出
 		
 		Network network = networkDaoImpl.get(Network.class, network_id);
 		Set<Node> nodes = network.getNodes();
 		return nodes;
 	}
 	
-	public void addLink(int network_id, int link_id) {
+	public void addLink(int network_id, int link_id) {//根据多态网络和节点ID增添链路
 		
 		Network network = networkDaoImpl.get(Network.class, network_id);
 		Link link = linkDaoImpl.get(Link.class, link_id);

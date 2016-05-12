@@ -43,6 +43,7 @@
 	       
 	       <action name="Demonstration-*" class="action.DemonstrationAction" method="{1}">
 	       		<result >/admin/content/demonstration/Demonstration-{1}.jsp</result>
+	   
 	           		
 	       </action>
 	      

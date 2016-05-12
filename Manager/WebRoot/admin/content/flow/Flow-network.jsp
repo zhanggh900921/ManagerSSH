@@ -32,7 +32,7 @@
 <body>
 
 <table >
-	<caption style="font-size: 25px; color: red;">可重构网络多态流量统计(单位byte)</caption>
+	<caption style="font-size: 25px; color: red;">可重构网络多态流量统计(单位Byte)</caption>
 	<thead>
 		<tr>
 			<td></td>

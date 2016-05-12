@@ -13,26 +13,26 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="alert" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="haha"/>
+			<item value="Byte"/>
+			<item value="value"/>
 			<item value="alert"/>
 			<item value="container"/>
 			<item value="Math.random()"/>
 			<item value="深圳"/>
 			<item value="option"/>
-			<item value="code"/>
-			<item value="hahaha"/>
-			<item value="node_id=45"/>
 		</list>
 		<list key="replacehistory">
+			<item value="KByte"/>
+			<item value="Byte"/>
 			<item value="node_id=20"/>
 			<item value="node_id=19"/>
 			<item value="node_id=18"/>
 			<item value="node_id=17"/>
 			<item value="node_id=16"/>
 			<item value="node_id=15"/>
-			<item value="node_id=14"/>
-			<item value="node_id=13"/>
 		</list>
 	</section>
 </section>

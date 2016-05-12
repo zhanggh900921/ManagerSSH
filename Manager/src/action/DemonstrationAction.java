@@ -5,13 +5,15 @@ import java.util.List;
 import com.opensymphony.xwork2.ActionSupport;
 
 import model.Link;
+import model.Network;
 import model.Node;
-import service.TopologyService;
+import service.*;
 
 public class DemonstrationAction extends ActionSupport{
 	private TopologyService topologyService;
-	
-
+	private NetworkService networkService;
+	private FlowService flowService;
+	private Network network;
 	
 	
 	private List<Node> nodes;
@@ -30,6 +32,7 @@ public class DemonstrationAction extends ActionSupport{
 	}
 	
 	public String node() {
+		flowService.nodesFlowUpdate();
 		nodes = topologyService.nodeList();
 		links = topologyService.linkList();
 		
@@ -43,7 +46,12 @@ public class DemonstrationAction extends ActionSupport{
 		return SUCCESS;
 	}
 	
-
+	public String judge() {
+		
+		network = networkService.get(3);
+		
+		return SUCCESS;
+	}
 	
 	public String add() {
 		topologyService.add(node.getId());
@@ -87,4 +95,29 @@ public class DemonstrationAction extends ActionSupport{
 	public void setNode(Node node) {
 		this.node = node;
 	}
+
+	public Network getNetwork() {
+		return network;
+	}
+
+	public void setNetwork(Network network) {
+		this.network = network;
+	}
+
+	public NetworkService getNetworkService() {
+		return networkService;
+	}
+
+	public void setNetworkService(NetworkService networkService) {
+		this.networkService = networkService;
+	}
+
+	public FlowService getFlowService() {
+		return flowService;
+	}
+
+	public void setFlowService(FlowService flowService) {
+		this.flowService = flowService;
+	}
+	
 }

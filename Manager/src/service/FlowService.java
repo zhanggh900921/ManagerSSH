@@ -106,9 +106,8 @@ public class FlowService {
 	public void nodesFlowUpdate() {  //依次获取每个节点
 		List<Node> nodes = nodeDaoImpl.findAll(Node.class);
 		for(Node n:nodes) {
-			if(n.isEnable()) {		//为了防止底层路由器关闭而导致无法建立连接产生异常	
-				fetch(n.getId());
-			}
+			n.setSum(n.getIcnFlow()+n.getIdnFlow()+n.getIsnFlow()+n.getIanFlow());
+			nodeDaoImpl.update(n);
 		}
 	}
 	
