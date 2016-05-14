@@ -244,7 +244,7 @@ $(document).ready(function(){
 					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
 			}, 150);
 			
-			var text1 = createText(null, "朱老师实验室", 0, -80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text1 = createText(null, "朱老师实验室", 200, -80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group1 = graph.createGroup("G1");
 			group1.addChild(myNode[1]);
 			group1.addChild(myNode[2]);
@@ -253,7 +253,7 @@ $(document).ready(function(){
 			groupStyle(group1);	
 			
 			
-			var text2 = createText(null, "北大节点AS1", 350, -30, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text2 = createText(null, "北大节点AS1", 550, -30, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group2 = graph.createGroup("G2");
 			group2.addChild(myNode[4]);
 			group2.addChild(myNode[5]);
@@ -264,7 +264,7 @@ $(document).ready(function(){
 			group2.addChild(text2);
 			groupStyle(group2);	
 			
-			var text3 = createText(null, "哈工大节点", -330, -300, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text3 = createText(null, "哈工大节点", -130, -300, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group3 = graph.createGroup("G3");
 			group3.addChild(myNode[8]);
 			group3.addChild(myNode[9]);
@@ -272,7 +272,7 @@ $(document).ready(function(){
 			group3.addChild(text3);
 			groupStyle(group3);	
 			
-			var text4 = createText(null, "北大节点AS3", -450, 250, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text4 = createText(null, "北大节点AS3", -250, 250, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group4 = graph.createGroup("G4");
 			group4.addChild(myNode[11]);
 			group4.addChild(myNode[13]);
@@ -280,7 +280,7 @@ $(document).ready(function(){
 			group4.addChild(text4);
 			groupStyle(group4);	
 			
-			var text5 = createText(null, "北大节点AS2", -110, 80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text5 = createText(null, "北大节点AS2", 90, 80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group5 = graph.createGroup("G5");
 			group5.addChild(myNode[12]);
 			group5.addChild(myNode[15]);

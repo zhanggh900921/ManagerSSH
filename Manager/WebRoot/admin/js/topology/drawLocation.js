@@ -10,45 +10,45 @@ function drawLocation(x,y,z) {
 	   }
 	   
 	   /*demonstration in use */
-	   location[19][1][0]=60;
+	   location[19][1][0]=260;
 	   location[19][1][1]=-300;
-	   location[19][2][0]=150;
+	   location[19][2][0]=350;
 	   location[19][2][1]=-150;
-	   location[19][3][0]=0;
+	   location[19][3][0]=200;
 	   location[19][3][1]=-150;
-	   location[19][4][0]=250;
+	   location[19][4][0]=450;
 	   location[19][4][1]=160;
-	   location[19][5][0]=250;
+	   location[19][5][0]=450;
 	   location[19][5][1]=280;
-	   location[19][6][0]=350;
+	   location[19][6][0]=550;
 	   location[19][6][1]=50;
-	   location[19][7][0]=150;
+	   location[19][7][0]=350;
 	   location[19][7][1]=50;
 	   
-	   location[19][8][0]=-400;
+	   location[19][8][0]=-100;
 	   location[19][8][1]=-150;
-	   location[19][9][0]=-480;
+	   location[19][9][0]=-280;
 	   location[19][9][1]=-300;
-	   location[19][10][0]=-550;
+	   location[19][10][0]=-350;
 	   location[19][10][1]=-150;
-	   location[19][11][0]=-450;
+	   location[19][11][0]=-250;
 	   location[19][11][1]=50;
-	   location[19][12][0]=-50;
+	   location[19][12][0]=150;
 	   location[19][12][1]=200;
-	   location[19][13][0]=-550;
+	   location[19][13][0]=-350;
 	   location[19][13][1]=350;
-	   location[19][14][0]=-550;
+	   location[19][14][0]=-350;
 	   location[19][14][1]=200;
 	   
-	   location[19][15][0]=-175;
+	   location[19][15][0]=25;
 	   location[19][15][1]=200;
-	   location[19][16][0]=-50;
+	   location[19][16][0]=150;
 	   location[19][16][1]=350;
-	   location[19][17][0]=-175;
+	   location[19][17][0]=25;
 	   location[19][17][1]=350;
-	   location[19][18][0]=350;
+	   location[19][18][0]=550;
 	   location[19][18][1]=350;
-	   location[19][19][0]=150;
+	   location[19][19][0]=350;
 	   location[19][19][1]=350;
 
 	   /*demonstration2 */

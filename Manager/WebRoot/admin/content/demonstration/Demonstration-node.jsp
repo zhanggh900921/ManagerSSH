@@ -152,28 +152,34 @@ $(document).ready(function(){
 		
 		var linkMapping = new Array(// no use
 									{"id":1,"from":1,"to":3},
-									{"id":2,"from":2,"to":3},
-									{"id":3,"from":3,"to":4},
-									{"id":4,"from":1,"to":5},
-									{"id":5,"from":2,"to":6},
-									{"id":6,"from":4,"to":5},
-									{"id":7,"from":4,"to":6},
-									{"id":8,"from":1,"to":7},
-									{"id":9,"from":2,"to":7},
-									{"id":10,"from":9,"to":11},
-									{"id":11,"from":9,"to":10},
-									{"id":12,"from":10,"to":14},
-									{"id":13,"from":8,"to":14},
-									{"id":14,"from":13,"to":14},
-									{"id":15,"from":12,"to":13},
-									{"id":16,"from":8,"to":12},
-									{"id":17,"from":11,"to":12},
-									{"id":18,"from":8,"to":9},
-									{"id":19,"from":14,"to":15},
-									{"id":20,"from":15,"to":17},
-									{"id":21,"from":15,"to":16},
-									{"id":22,"from":16,"to":17},
-									{"id":23,"from":7,"to":16});
+									{"id":2,"from":1,"to":2},
+									{"id":3,"from":2,"to":3},
+									{"id":4,"from":3,"to":8},
+									{"id":5,"from":8,"to":10},
+									{"id":6,"from":8,"to":9},
+									{"id":7,"from":9,"to":10},
+									{"id":8,"from":10,"to":14},
+									{"id":9,"from":3,"to":11},
+									{"id":10,"from":2,"to":7},
+									{"id":11,"from":6,"to":7},
+									{"id":12,"from":6,"to":18},
+									{"id":13,"from":5,"to":18},
+									{"id":14,"from":18,"to":19},
+									{"id":15,"from":5,"to":19},
+									{"id":16,"from":5,"to":7},
+									{"id":17,"from":7,"to":11},
+									{"id":18,"from":11,"to":12},
+									{"id":19,"from":11,"to":14},
+									{"id":20,"from":14,"to":15},
+									{"id":21,"from":12,"to":16},
+									{"id":22,"from":15,"to":17},
+									{"id":23,"from":13,"to":14},
+									{"id":24,"from":16,"to":19},
+									{"id":25,"from":16,"to":17},
+									{"id":26,"from":13,"to":17},
+									{"id":27,"from":12,"to":15},
+									{"id":28,"from":4,"to":5},
+									{"id":29,"from":7,"to":19});
     	   
     	   
     	   var nodeSize = '<s:property value="nodes.size"/>';
@@ -181,28 +187,19 @@ $(document).ready(function(){
 		   var myNode=new Array(24);
 		   var myLinks=new Array(24);
 		   var newLinks=new Array(24);
-		   var myPath = new Array({"from":2,"to":3,"type":2,"id":2}); //初始化
+		   var myPath = new Array({"from":2,"to":3,"type":2,"id":3}); //初始化
 		   
-		   var path1 = new Array({"from":9,"to":8,"type":3,"id":18},
-		                        {"from":8,"to":14,"type":3,"id":13},
-		                        {"from":14,"to":15,"type":1,"id":19},
-		                        {"from":15,"to":16,"type":1,"id":21},
-		                        {"from":16,"to":7,"type":1,"id":23},
-		                        {"from":7,"to":1,"type":2,"id":8},
-		                        {"from":1,"to":5,"type":2,"id":4},
-		                        {"from":5,"to":4,"type":2,"id":6},
-		                        {"from":4,"to":6,"type":2,"id":7}
+		   var path1 = new Array({"from":11,"to":12,"type":3,"id":18},
+		                        {"from":12,"to":15,"type":3,"id":27},
+		                        {"from":15,"to":17,"type":2,"id":22}
 		                       );
 		                  
-		    var path2 = new Array({"from":9,"to":8,"type":3,"id":18},
-		                        {"from":8,"to":14,"type":3,"id":13},
-		                        {"from":14,"to":15,"type":1,"id":19},
-		                        {"from":15,"to":16,"type":1,"id":21},
-		                        {"from":16,"to":7,"type":1,"id":23},
-		                        {"from":7,"to":2,"type":2,"id":9},
-		                        {"from":2,"to":6,"type":2,"id":5}
+		    var path2 = new Array({"from":1,"to":2,"type":3,"id":2},
+		                        {"from":2,"to":7,"type":3,"id":10},
+		                        {"from":7,"to":5,"type":1,"id":16},
+		                        {"from":5,"to":19,"type":1,"id":15}
 		                       ); 
-
+			
 		
 		$(function(){
 			
@@ -248,6 +245,7 @@ $(document).ready(function(){
 				edge.edgeType = type || Q.Consts.EDGE_TYPE_DEFAULT;
 				edge.setStyle(Q.Styles.EDGE_LINE_DASH, [2, 1]);
 				edge.setStyle(Q.Styles.ARROW_TO_LINE_DASH, [2, 1]);
+				
 				edge.setStyle(Q.Styles.LABEL_OFFSET_Y, -10);
 			    edge.setStyle(Q.Styles.LABEL_POSITION, Q.Position.CENTER_TOP);
 			    edge.setStyle(Q.Styles.LABEL_ANCHOR_POSITION, Q.Position.CENTER_BOTTOM);
@@ -290,7 +288,7 @@ $(document).ready(function(){
 					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
 			}, 150);
 			
-			var text1 = createText(null, "朱老师实验室", 0, -80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text1 = createText(null, "朱老师实验室", 200, -80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group1 = graph.createGroup("G1");
 			group1.addChild(myNode[1]);
 			group1.addChild(myNode[2]);
@@ -299,7 +297,7 @@ $(document).ready(function(){
 			groupStyle(group1);	
 			
 			
-			var text2 = createText(null, "北大节点AS1", 350, -30, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text2 = createText(null, "北大节点AS1", 550, -30, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group2 = graph.createGroup("G2");
 			group2.addChild(myNode[4]);
 			group2.addChild(myNode[5]);
@@ -310,7 +308,7 @@ $(document).ready(function(){
 			group2.addChild(text2);
 			groupStyle(group2);	
 			
-			var text3 = createText(null, "哈工大节点", -330, -300, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text3 = createText(null, "哈工大节点", -130, -300, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group3 = graph.createGroup("G3");
 			group3.addChild(myNode[8]);
 			group3.addChild(myNode[9]);
@@ -318,7 +316,7 @@ $(document).ready(function(){
 			group3.addChild(text3);
 			groupStyle(group3);	
 			
-			var text4 = createText(null, "北大节点AS3", -450, 250, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text4 = createText(null, "北大节点AS3", -250, 250, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group4 = graph.createGroup("G4");
 			group4.addChild(myNode[11]);
 			group4.addChild(myNode[13]);
@@ -326,7 +324,7 @@ $(document).ready(function(){
 			group4.addChild(text4);
 			groupStyle(group4);	
 			
-			var text5 = createText(null, "北大节点AS2", -110, 80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var text5 = createText(null, "北大节点AS2", 90, 80, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
 			var group5 = graph.createGroup("G5");
 			group5.addChild(myNode[12]);
 			group5.addChild(myNode[15]);
@@ -374,15 +372,15 @@ $(document).ready(function(){
     	   var timer2 = setInterval(function() {
 
 				if(flag==1) {
-					//buildPath(path1);
+					buildPath(path1);
 					flag=2;
 				}
 				else if(flag==2) {
-					//buildPath(path2);
+					buildPath(path2);
 					flag=1;
 				}
 
-			}, 5000);   
+			}, 10000);   
 
 
 	
