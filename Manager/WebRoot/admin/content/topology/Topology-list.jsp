@@ -145,7 +145,7 @@ $(document).ready(function(){
     	 var nodeNames =new Array("","/router/pku/n3","/router/pku/n1","/router/pku/n2","/router/main/n3","/router/main/n4","/router/main/n1",
     	 							"/router/main/n2","/router/hit/n1","/router/hit/n3","/router/hit/n2", "/router/sz/n0","/router/sz/n1",
     	 							"/router/sz/n6","/router/sz/n2","/router/sz/n3","/router/sz/n5","/router/sz/n4","/router/main/n5",
-    	                            "/router/main/n6"
+    	                            "/router/main/n6","/router/scut/n1"
 		                         )		
 		
    	   
@@ -290,7 +290,11 @@ $(document).ready(function(){
 			groupStyle(group5);	
    		   
 
-   		  
+   		  	var text6 = createText(null, "华南理工节点", -550, 100, Q.Position.CENTER_TOP, 100, 30, 30, "#2eaae6");
+			var group6 = graph.createGroup("G6");
+			group6.addChild(myNode[20]);
+			group6.addChild(text6);
+			groupStyle(group6);
  
    		
 		  })

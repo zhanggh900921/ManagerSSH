@@ -58,7 +58,7 @@ $(function(){
     <span><img src="images/network/n<s:property value="#I.index+1"/>.png" /></span>
     <div class="lright">
     <h2 style="font-size: medium;"><s:property value="#n.name"/></h2>
-    <p style="font-size: medium;"><br />当前流量：<s:property value="#n.flow"/><br /><br />当前状态：<s:property value="#n.enable"/><br /><br />当前拓扑：<a href="Network-show?network.id=<s:property value="#n.id"/>" style="font-size: medium; color: red;">查看</a><br /><br />重构拓扑：<a href="Network-form?network.id=<s:property value="#n.id"/>" style="font-size: medium; color: red;">编辑</a></p><br />
+    <p style="font-size: medium;"><br />流量: <a style="color: red;font-size: medium;"><s:property value="#n.flow" /> Byte</a> <br /><br />当前状态：<s:property value="#n.enable"/><br /><br />当前拓扑：<a href="Network-show?network.id=<s:property value="#n.id"/>" style="font-size: medium; color: red;">查看</a><br /><br />重构拓扑：<a href="Network-form?network.id=<s:property value="#n.id"/>" style="font-size: medium; color: red;">编辑</a></p><br />
     <s:if test="#n.enable==false">
     	<a class="enter" href="Network-add?network.id=<s:property value="#n.id"/>">添加多态</a>
     </s:if>
