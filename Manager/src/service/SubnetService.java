@@ -142,8 +142,8 @@ public class SubnetService {
 		subnet.getLinks().clear();
 		for(Node n:nodes) { //数据库中操作的同时更新底层节点的信息
 			subnet.getNodes().add(n);
-			if(n.isEnable()) 		//为了防止底层路由器关闭而导致无法建立连接产生异常	
-				addNodeInActual(n.getId(), subnetId);
+			//if(n.isEnable()) 		//为了防止底层路由器关闭而导致无法建立连接产生异常	
+				//addNodeInActual(n.getId(), subnetId);
 		}
 		for(Link l:links)
 			subnet.getLinks().add(l);

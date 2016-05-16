@@ -249,7 +249,7 @@ $(document).ready(function(){
 		   var myLinks=new Array(24);
 		   var newLinks=new Array(24);
 
-
+			
 		
 		$(function(){
 			

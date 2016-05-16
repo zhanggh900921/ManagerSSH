@@ -58,8 +58,8 @@ $(document).ready(function(){
     <div class="tools">
     
     	<ul class="toolbar">
-        <li class="click"><span><img src="images/t01.png" /></span>添加</li>
-        <li class="click"><span><img src="images/t02.png" /></span>修改</li>
+        <li class="click" id="nnn"></span><s:property value="Network.nodes.size"/></li>
+        <li class="click" id="lll"><s:property value="Network.links.size"/></li>
         <li><span><img src="images/t03.png" /></span>删除</li>
         <li><span><img src="images/t04.png" /></span>统计</li>
         <li style="font-size: large;border: medium;font-weight: bold;color: red;">&nbsp;&nbsp;&nbsp;<s:property value="network.name"/>信息与状态&nbsp;&nbsp;</li>      
@@ -222,58 +222,36 @@ $(document).ready(function(){
     
     
     
-   <script type="text/javascript">		
+ <script type="text/javascript">		
     	   
     	 var nodeNames =new Array("","/router/pku/n3","/router/pku/n1","/router/pku/n2","/router/main/n3","/router/main/n4","/router/main/n1",
     	 							"/router/main/n2","/router/hit/n1","/router/hit/n3","/router/hit/n2", "/router/sz/n0","/router/sz/n1",
     	 							"/router/sz/n6","/router/sz/n2","/router/sz/n3","/router/sz/n5","/router/sz/n4","/router/main/n5",
-    	                            "/router/main/n6"
+    	                            "/router/main/n6","/router/scut/n1"
 		                         )		
 		
-   	   
+   	   	 
     	   
-    	   var nodeSize = '<s:property value="nodes.size"/>';
-		   var linkSize = '<s:property value="links.size"/>';
+    	   var nodeSize = document.getElementById("nnn").innerHTML;
+		   var linkSize = document.getElementById("lll").innerHTML;
 		   var myNode=new Array(24);
 		   var myLinks=new Array(24);
 		   var newLinks=new Array(24);
 
-
+			
 		
 		$(function(){
 			
 		 
 
 		   var graph = new Q.Graph("canvas");
+		    
 		   for (var i=0;i<nodeSize;i++) {   //创建节点
 		   		var node=document.getElementById(i).innerHTML;
-		   		//alert(nodeNames[node]);
+		   		
 		   		myNode[node] = graph.createNode(nodeNames[node], drawLocation(nodeSize,node, 0), drawLocation(nodeSize, node, 1));
 		   } 
-		   
-		   function createText(host, name, x, y, anchorPosition, w, h, fontSize, fontColor, backgroundColor){//文字框函数
-			    var text = graph.createText(name, x, y);
-			    text.setStyle(Q.Styles.LABEL_BORDER, 0.5);
-			    text.setStyle(Q.Styles.LABEL_PADDING, 5);
-			    text.setStyle(Q.Styles.LABEL_BORDER_STYLE, "#1D4876");
-			    text.tooltipType = "text";
-			    if(host){
-			        text.host = text.parent = host;
-			    }
-			    if(anchorPosition){
-			        text.anchorPosition = anchorPosition;
-			        text.setStyle(Q.Styles.LABEL_ALIGN_POSITION, anchorPosition);
-			    }
-			    if(w && h){
-			        text.setStyle(Q.Styles.LABEL_SIZE, new Q.Size(w, h));
-			    }
-			
-			    text.setStyle(Q.Styles.LABEL_FONT_SIZE, fontSize || 14);
-			    text.setStyle(Q.Styles.LABEL_COLOR, fontColor || "#555");
-			    text.setStyle(Q.Styles.LABEL_BACKGROUND_COLOR, backgroundColor || "#FFF");
-			
-			    return text;
-			}
+		  
 			
 
 		   
@@ -296,13 +274,7 @@ $(document).ready(function(){
 				return edge;
 			}   
 			
-			function groupStyle(group){
-				group.setStyle(Q.Styles.GROUP_BACKGROUND_COLOR, Q.toColor(0xCCfcfb9b));
-				group.setStyle(Q.Styles.GROUP_BACKGROUND_GRADIENT, Q.Gradient.LINEAR_GRADIENT_HORIZONTAL);
-				group.setStyle(Q.Styles.GROUP_STROKE, 2);
-				group.setStyle(Q.Styles.GROUP_STROKE_STYLE, "#2898E0");
-				group.setStyle(Q.Styles.GROUP_STROKE_LINE_DASH, [3,2]);
-			}
+
 		   
    		   for (var m=0;m<linkSize;m++) { //创建链路
    		  		
@@ -316,20 +288,9 @@ $(document).ready(function(){
    		  		 
    		   } 
    		   
-   		   	var offset = 0;
-			var index = 0;
-			var timer = setInterval(function(){
-				offset += -1;
-				index++;
-				index = index%20;
-				for(var q=0; q<linkSize; q++)
-					myLinks[q+1].setStyle(Q.Styles.ARROW_TO_OFFSET, -0.3 -0.035 * (20 - index));
-			}, 150);
-			
-			
-   		   
 
-   		  
+			
+
  
    		
 		  })
