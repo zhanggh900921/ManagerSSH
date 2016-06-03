@@ -37,6 +37,17 @@ public class Link {
 	private long ianBw;
 	private long isnBw;
 	private long sum;
+	private boolean ifBreak;
+
+	public boolean isIfBreak() {
+		return ifBreak;
+	}
+
+
+	public void setIfBreak(boolean ifBreak) {
+		this.ifBreak = ifBreak;
+	}
+
 
 	public int getId() {
 		return id;

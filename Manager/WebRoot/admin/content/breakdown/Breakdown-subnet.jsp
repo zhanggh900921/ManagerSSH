@@ -17,7 +17,7 @@
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">性能管理</a></li>
-    <li><a href="computer.html">服务承载网流量统计</a></li>
+    <li><a href="computer.html">服务承载网故障信息</a></li>
    
     </ul>
     </div>
@@ -27,10 +27,10 @@
     
     <thead>
     	<tr>
-        <th width="25%">名称</th>
-        <th width="11%">修改日期</th>
+        <th width="10%">名称</th>
+        <th width="11%">网络数目</th>
         <th width="10%">类型</th>
-        <th width="6%">流量大小</th>
+        
         <th width="48%"></th>
         </tr>    	
     </thead>
@@ -39,9 +39,9 @@
     <s:iterator value="networks" var="n" status="I">
     	<tr>
         <td><img src="images/f01.png" /><a href="Breakdown-subnet2?network.id=<s:property value="#n.id"/>"><s:property value="#n.name"/></a></td>
-        <td>2015/8/14 17:38</td>
-        <td>文件夹</td>
-        <td ><s:property value="#n.flow"/></td>
+        <td align="left"><s:property value="#n.subnets.size"/></td>
+        <td>多态网络</td>
+       
         <td></td>
         </tr>
     </s:iterator>  

@@ -1,0 +1,239 @@
+package service;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.*;
+
+import org.json.JSONException;
+
+
+import dao.impl.*;
+import model.Link;
+
+import model.Network;
+import model.Node;
+import model.Subnet;
+
+public class SubnetService {
+
+	private SubnetDaoImpl subnetDaoImpl;
+	private NodeDaoImpl nodeDaoImpl;
+	private LinkDaoImpl linkDaoImpl;
+	
+	private NetworkDaoImpl NetworkDaoImpl;
+	
+	public void add(Subnet subnet) {
+		subnetDaoImpl.save(subnet);
+	}
+
+	public List<Subnet> list() {
+		return subnetDaoImpl.findAll(Subnet.class);
+	}
+	
+	public List<Subnet> getWithNetwork(int network_id) {
+		return subnetDaoImpl.find("from Subnet where network.id="+network_id);
+	}
+	
+	public Subnet get(int id) {
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, id);
+		return subnet;
+	}
+	
+	public void delete(int id) {
+		Subnet subnet = subnetDaoImpl.get(Subnet.class,id);
+		subnet.getNodes().clear();
+		subnet.getLinks().clear();		
+		
+		subnetDaoImpl.delete(subnet);
+	}
+	
+	public void addNode(int subnet_id, int node_id) { //数据库中操作的同时更新底层节点的信息
+		
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnet_id);
+		Node node = nodeDaoImpl.get(Node.class, node_id);
+		subnet.getNodes().add(node);
+		subnetDaoImpl.update(subnet);
+		
+		if(node.isEnable()) 		//为了防止底层路由器关闭而导致无法建立连接产生异常	
+			addNodeInActual(node_id,subnet_id);
+	}
+	
+	public void deleteNode(int subnet_id, int node_id) {  //数据库中操作的同时更新底层节点的信息
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnet_id);
+		Node node = nodeDaoImpl.get(Node.class, node_id);
+		subnet.getNodes().remove(node);
+		subnetDaoImpl.update(subnet);
+		
+		if(node.isEnable()) 		//为了防止底层路由器关闭而导致无法建立连接产生异常	
+			deleteNodeInActual(node_id, subnet_id);
+	}
+	
+	public void addLink(int subnet_id, int link_id) {
+		
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnet_id);
+		Link link = linkDaoImpl.get(Link.class, link_id);
+		subnet.getLinks().add(link);
+		subnetDaoImpl.update(subnet);
+	}
+	
+	public void deleteLink(int subnet_id, int link_id) {
+		
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnet_id);
+		Link link = linkDaoImpl.get(Link.class, link_id);
+		subnet.getLinks().remove(link);
+		subnetDaoImpl.update(subnet);
+	}
+	
+	public void virtualization(int networkId, int nodeNum, int subnetId) {
+		Network network = NetworkDaoImpl.get(Network.class, networkId);
+
+		List<Node> nodes=null;
+		List<Link> links=null;
+		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnetId);
+		
+		switch (nodeNum) {//数量为4--10节点的虚拟化
+			case 4:
+				nodes = nodeDaoImpl.find("from Node where id in (2,3,7,11)");
+				links = linkDaoImpl.find("from Link where id in (3,9,10,17)");			
+				break;
+			case 5:
+				nodes = nodeDaoImpl.find("from Node where id in (1,2,3,7,11)");
+				links = linkDaoImpl.find("from Link where id in (1,2,3,9,10,17)");			
+				break;
+			case 6:
+				nodes = nodeDaoImpl.find("from Node where id in (12,13,14,15,16,17)");
+				links = linkDaoImpl.find("from Link where id in (20,21,22,23,25,26,27)");			
+				break;
+			case 7:
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27)");			
+				break;
+			case 8:
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,14,15,16,17,7,19)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,25,27,17,29,24)");			
+				break;
+			case 9:
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17,7,19)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27,17,29,24)");			
+				break;
+			case 10:
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17,3,8,10)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27,4,5,8,9)");			
+				break;
+
+		}
+		
+		subnet.getNodes().clear();
+		subnet.getLinks().clear();
+		for(Node n:nodes) { //数据库中操作的同时更新底层节点的信息
+			subnet.getNodes().add(n);
+			//if(n.isEnable()) 		//为了防止底层路由器关闭而导致无法建立连接产生异常	
+				//addNodeInActual(n.getId(), subnetId);
+		}
+		for(Link l:links)
+			subnet.getLinks().add(l);
+		subnetDaoImpl.update(subnet);
+	}
+	
+	public String configure(String urlString) throws UnsupportedEncodingException {
+		//下发服务承载网更新信息
+		String res = "";
+		try { 
+		URL url = new URL(urlString);
+		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"GBK"));
+		String line;
+		while ((line = in.readLine()) != null) {
+			res += line;
+		}
+		in.close();
+		} catch (Exception e) {
+		System.out.println(e);
+		}
+		return res;
+	}
+	
+	public void addNodeInActual(int nodeId, int subnetId) { //下发单个节点的服务承载网信息
+		
+		Properties props = new Properties();
+		try {
+			props.load(this.getClass().getClassLoader().getResourceAsStream("config/router.properties"));
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		String name = props.getProperty("name"+nodeId);
+		String IP = props.getProperty("IP"+nodeId);
+		try {
+			configure("http://"+IP+":6666/service?RouterName="+name+"&method=add&serviceId="+subnetId);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	public void deleteNodeInActual(int nodeId, int subnetId) { //下发单个节点的服务承载网信息
+		
+		Properties props = new Properties();
+		try {
+			props.load(this.getClass().getClassLoader().getResourceAsStream("config/router.properties"));
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		String name = props.getProperty("name"+nodeId);
+		String IP = props.getProperty("IP"+nodeId);
+		try {
+			configure("http://"+IP+":6666/service?RouterName="+name+"&method=del&serviceId="+subnetId);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	
+	public SubnetDaoImpl getSubnetDaoImpl() {
+		return subnetDaoImpl;
+	}
+
+	public void setSubnetDaoImpl(SubnetDaoImpl subnetDaoImpl) {
+		this.subnetDaoImpl = subnetDaoImpl;
+	}
+
+
+
+	public NodeDaoImpl getNodeDaoImpl() {
+		return nodeDaoImpl;
+	}
+
+	public void setNodeDaoImpl(NodeDaoImpl nodeDaoImpl) {
+		this.nodeDaoImpl = nodeDaoImpl;
+	}
+
+	public LinkDaoImpl getLinkDaoImpl() {
+		return linkDaoImpl;
+	}
+
+	public void setLinkDaoImpl(LinkDaoImpl linkDaoImpl) {
+		this.linkDaoImpl = linkDaoImpl;
+	}
+
+	public NetworkDaoImpl getNetworkDaoImpl() {
+		return NetworkDaoImpl;
+	}
+
+	public void setNetworkDaoImpl(NetworkDaoImpl networkDaoImpl) {
+		NetworkDaoImpl = networkDaoImpl;
+	}
+
+	
+
+
+
+	
+
+	
+	
+	
+
+}

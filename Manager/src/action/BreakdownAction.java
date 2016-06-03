@@ -1,6 +1,7 @@
 package action;
 
-import java.util.List;
+import java.util.*;
+
 
 
 import model.*;
@@ -26,6 +27,8 @@ public class BreakdownAction extends ActionSupport{
 	
 	private FlowService flowService;
 	
+	private List<Boolean> ifBroken = new ArrayList<Boolean>();
+	
 	public String node() {
 		
 		nodes = topologyService.nodeList();
@@ -46,8 +49,20 @@ public class BreakdownAction extends ActionSupport{
 	
 	public String subnet2() {
 		network = networkService.get(network.getId());
-		subnets = flowService.subnetFlowUpdate(network.getId());
+		subnets = subnetService.getWithNetwork(network.getId());
+		
+		for(Subnet s:subnets){
+			Boolean b = subnetService.testFault(s);
+			ifBroken.add(b);
+		}
 			
+		return SUCCESS;
+	}
+	
+	public String subnetShow() {
+		int subnetId = subnet.getId();
+		subnet = subnetService.get(subnetId);
+		network = subnet.getNetwork();
 		return SUCCESS;
 	}
 	
@@ -136,6 +151,16 @@ public class BreakdownAction extends ActionSupport{
 	public void setFlowService(FlowService flowService) {
 		this.flowService = flowService;
 	}
+
+	public List<Boolean> getIfBroken() {
+		return ifBroken;
+	}
+
+	public void setIfBroken(List<Boolean> ifBroken) {
+		this.ifBroken = ifBroken;
+	}
+
+
 	
 
 

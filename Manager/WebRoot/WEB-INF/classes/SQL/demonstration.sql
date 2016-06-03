@@ -26,39 +26,39 @@ insert into node set node_id=17,name='/router/sz/n4',enable=0,icnflow=300,idnflo
 
 insert into node set node_id=20,name='/router/scut/n1',enable=0,icnflow=300,idnflow=0,ianflow=200,isnflow=0,sum=9908,icnFlowLimit=1000,idnFlowLimit=1000,isnFlowLimit=1000,ianFlowLimit=1000,cpu=50,memory=38;
 
-insert into link set link_id=1,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=2,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=3,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=4,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=5,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=6,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=7,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=8,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=9,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
+insert into link set link_id=1,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=2,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=3,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=4,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=5,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=6,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=7,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=8,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=9,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
 
-insert into link set link_id=10,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=11,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=12,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=13,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=14,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=15,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=16,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=17,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=18,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
+insert into link set link_id=10,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=11,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=12,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=13,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=14,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=15,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=16,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=17,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=true;
+insert into link set link_id=18,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
 
-insert into link set link_id=19,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=20,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=21,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=22,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=23,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
+insert into link set link_id=19,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=20,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=21,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=22,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=23,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
 
-insert into link set link_id=24,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=25,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=26,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=27,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=28,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=29,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
-insert into link set link_id=30,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0;
+insert into link set link_id=24,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=25,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=26,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=27,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=28,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=29,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
+insert into link set link_id=30,icnBw=50,idnBw=30,ianBw=20,isnBw=10,sum=100,delay=0,ifBreak=false;
 
 insert into network set network_id=1,enable=0,flow=0,name='面向内容网络';
 insert into network set network_id=2,enable=0,flow=0,name='面向身份网络';

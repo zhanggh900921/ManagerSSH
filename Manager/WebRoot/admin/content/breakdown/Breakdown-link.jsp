@@ -81,19 +81,24 @@ $(document).ready(function(){
         <tbody>
         <s:iterator value="links" var="l" status="I">
 	        <tr>
-	        <td><s:property value="#l.id"/></td>
-	       
-	        <td style="color: green">正常连接</td>
-	             
-	        <td><s:property value="#l.sum"/></td>
-	      
-	        <td><s:property value="#l.icnBw"/></td>
-	           
-	        <td><s:property value="#l.idnBw"/></td>
-	        
-	        <td><s:property value="#l.ianBw"/></td>
-	     
-	        <td><s:property value="#l.isnBw"/></td>
+		        <td><s:property value="#l.id"/></td>
+		        <s:if test="#l.ifBreak==1">
+		    		<td style="color: red">链路故障</td>
+		    	</s:if>
+		    	<s:else>
+		    		<td style="color: green">正常连接</td>
+		    	</s:else>
+		        
+		             
+		        <td><s:property value="#l.sum"/></td>
+		      
+		        <td><s:property value="#l.icnBw"/></td>
+		           
+		        <td><s:property value="#l.idnBw"/></td>
+		        
+		        <td><s:property value="#l.ianBw"/></td>
+		     
+		        <td><s:property value="#l.isnBw"/></td>
 	        
 	        </tr>        
         </s:iterator>

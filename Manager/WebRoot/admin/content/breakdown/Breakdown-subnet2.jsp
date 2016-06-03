@@ -17,7 +17,7 @@
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">性能管理</a></li>
-    <li><a href="computer.html">服务承载网流量统计</a></li>
+    <li><a href="computer.html">服务承载网故障信息</a></li>
    
     </ul>
     </div>
@@ -28,8 +28,6 @@
     <thead>
     	<tr>
         <th width="25%">服务承载网名称</th>
-        <th width="11%">当前流量(Byte)</th>
-        <th width="10%">流量限制(Byte)</th>
         <th width="5%">当前状态</th>
         <th width="48%"></th>
         </tr>    	
@@ -38,12 +36,10 @@
     <tbody>
     <s:iterator value="subnets" var="s" status="I">
     	<tr>
-        <td><img src="images/f03.png" /><s:property value="#s.name"/></td>
-        <td><s:property value="#s.flow"/></td>
-        <td><s:property value="#s.flowLimit"/></td>
-        
-       	<s:if test="#s.flow>#s.flowLimit">
-        	<td style="color: red">流量超额</td>
+        <td><img src="images/f03.png" /><a href="Breakdown-subnetShow?subnet.id=<s:property value="#s.id"/>"><s:property value="#s.name"/></a></td>
+       
+       	<s:if test="ifBroken.get(#I.index)==1">
+        	<td style="color: red">链路故障</td>
         </s:if>
         <s:else>
         	<td style="color: green">状态正常</td>

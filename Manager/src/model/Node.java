@@ -6,7 +6,7 @@ import java.util.*;
 import javax.persistence.*;
 
 @Entity
-public class Node {
+public class Node implements Comparable<Node> {
 	
 	@Id @Column(name="node_id")
 	
@@ -157,6 +157,14 @@ public class Node {
 	}
 	public void setMemory(int memory) {
 		this.memory = memory;
+	}
+	@Override
+	public int compareTo(Node n) {
+		if(id<n.getId())
+			return -1;
+		else if (id>n.getId())
+			return 1;
+		return 0;
 	}
 	
 	

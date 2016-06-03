@@ -1,7 +1,7 @@
 package model;
 
-import java.util.HashSet;
-import java.util.Set;
+
+import java.util.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -23,7 +23,8 @@ public class Subnet {
 	
 	private long flow=0;    
 	
-	private long flowLimit;    
+	private long flowLimit;   
+	
 	
 	@ManyToOne(targetEntity=Network.class)
 	@JoinColumn(name="network_id" , referencedColumnName="network_id",nullable=true)
@@ -34,14 +35,14 @@ public class Subnet {
 	joinColumns=@JoinColumn(name="subnet_id",referencedColumnName="subnet_id"),
 	inverseJoinColumns=@JoinColumn(name="node_id",referencedColumnName="node_id")			
 			)   //如果相对中间表中的数据进行修改，必须有这些，而不能用mapped by，还要设置cascade
-	private Set<Node> nodes = new HashSet<Node>();
+	private Set<Node> nodes = new TreeSet<Node>();
 	
 	@ManyToMany(targetEntity=Link.class,fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="link_subnet",
 	joinColumns=@JoinColumn(name="subnet_id",referencedColumnName="subnet_id"),
 	inverseJoinColumns=@JoinColumn(name="link_id",referencedColumnName="link_id")			
 			)   //如果相对中间表中的数据进行修改，必须有这些，而不能用mapped by，还要设置cascade
-	private Set<Link> links = new HashSet<Link>();
+	private Set<Link> links = new TreeSet<Link>();
 
 	
 	

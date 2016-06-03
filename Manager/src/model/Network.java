@@ -1,7 +1,7 @@
 package model;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,21 +24,21 @@ public class Network {
 	private boolean enable;
 	
 	@OneToMany(targetEntity=Subnet.class,mappedBy="network",fetch=FetchType.EAGER)
-	private Set<Subnet> subnets = new HashSet<Subnet>();
+	private Set<Subnet> subnets = new TreeSet<Subnet>();
 	
 	@ManyToMany(targetEntity=Node.class,fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="node_network",
 	joinColumns=@JoinColumn(name="network_id",referencedColumnName="network_id"),
 	inverseJoinColumns=@JoinColumn(name="node_id",referencedColumnName="node_id")			
 			)   //如果相对中间表中的数据进行修改，必须有这些，而不能用mapped by，还要设置cascade
-	private Set<Node> nodes = new HashSet<Node>();
+	private Set<Node> nodes = new TreeSet<Node>();
 	
 	@ManyToMany(targetEntity=Link.class,fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="link_network",
 	joinColumns=@JoinColumn(name="network_id",referencedColumnName="network_id"),
 	inverseJoinColumns=@JoinColumn(name="link_id",referencedColumnName="link_id")			
 			)   //如果相对中间表中的数据进行修改，必须有这些，而不能用mapped by，还要设置cascade
-	private Set<Link> links = new HashSet<Link>();
+	private Set<Link> links = new TreeSet<Link>();
 	
 	
 	

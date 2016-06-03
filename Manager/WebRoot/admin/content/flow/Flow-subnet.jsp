@@ -27,10 +27,10 @@
     
     <thead>
     	<tr>
-        <th width="25%">名称</th>
-        <th width="11%">修改日期</th>
+        <th width="12%">名称</th>
+        <th width="13%">包含服务承载网个数</th>
         <th width="10%">类型</th>
-        <th width="6%">流量大小</th>
+        <th width="10%">多态网络总流量(Byte)</th>
         <th width="48%"></th>
         </tr>    	
     </thead>
@@ -39,9 +39,9 @@
     <s:iterator value="networks" var="n" status="I">
     	<tr>
         <td><img src="images/f01.png" /><a href="Flow-subnet2?network.id=<s:property value="#n.id"/>"><s:property value="#n.name"/></a></td>
-        <td>2015/8/14 17:38</td>
-        <td>文件夹</td>
-        <td ><s:property value="#n.flow"/></td>
+        <td align="center"><s:property value="#n.subnets.size"/></td>
+        <td>多态网络</td>
+        <td align="center"><s:property value="#n.flow"/></td>
         <td></td>
         </tr>
     </s:iterator>  

@@ -191,12 +191,22 @@ $(document).ready(function(){
 		   var newLinks=new Array(24);
 		   var myPath = new Array({"from":2,"to":3,"type":2,"id":3}); //≥ı ºªØ
 		   
-		   var path1 = new Array({"from":11,"to":12,"type":3,"id":18},
-		                        {"from":12,"to":15,"type":3,"id":27},
-		                        {"from":15,"to":17,"type":2,"id":22}
-		                       );
+
 		                  
-		    var path2 = new Array({"from":1,"to":2,"type":3,"id":2},
+		    var path1 = new Array(
+		    					{"from":20,"to":11,"type":2,"id":30},
+		                        {"from":11,"to":7,"type":2,"id":17},
+		                        {"from":7,"to":5,"type":1,"id":16},
+		                        {"from":5,"to":19,"type":1,"id":15}
+		                       ); 
+		                       
+		    var path2 = new Array(
+		    					);                   
+		    var path3 = new Array(
+		    					{"from":20,"to":11,"type":2,"id":30},
+		   						{"from":11,"to":3,"type":2,"id":9},
+		   						{"from":3,"to":1,"type":3,"id":1},
+		    					{"from":1,"to":2,"type":3,"id":2},
 		                        {"from":2,"to":7,"type":3,"id":10},
 		                        {"from":7,"to":5,"type":1,"id":16},
 		                        {"from":5,"to":19,"type":1,"id":15}
@@ -378,16 +388,22 @@ $(document).ready(function(){
     		  var flag=1;
 
     	   var timer2 = setInterval(function() {
-
 				if(flag==1) {
 					buildPath(path1);
 					flag=2;
 				}
-				else if(flag==2) {
-					buildPath(path2);
-					flag=1;
+ 				else if(flag==2) {
+ 					buildPath(path2);
+					graph.graphModel.remove(myLinks[17]);
+					var breakLink = graph.createEdge("¡¥¬∑π ’œ", myNode[7], myNode[11]);
+					breakLink.setStyle(Q.Styles.ARROW_TO_SIZE, 0);
+					breakLink.setStyle(Q.Styles.EDGE_COLOR, "red" || "#000");
+					flag=3;
 				}
-
+				else if(flag=3) {
+					buildPath(path3);
+					graph.graphModel.remove(myLinks[17]);
+				} 
 			}, 10000);   
 
 

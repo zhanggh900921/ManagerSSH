@@ -95,47 +95,36 @@ public class SubnetService {
 		List<Link> links=null;
 		Subnet subnet = subnetDaoImpl.get(Subnet.class, subnetId);
 		
-		switch (nodeNum) {//数量为4--13节点的虚拟化
+		switch (nodeNum) {//数量为4--10节点的虚拟化
 			case 4:
-				nodes = nodeDaoImpl.find("from Node where id in (2,3,9,10)");
-				links = linkDaoImpl.find("from Link where id in (5,6,8,14)");			
+				nodes = nodeDaoImpl.find("from Node where id in (2,3,7,11)");
+				links = linkDaoImpl.find("from Link where id in (3,9,10,17)");			
 				break;
 			case 5:
-				nodes = nodeDaoImpl.find("from Node where id in (2,3,8,9,10)");
-				links = linkDaoImpl.find("from Link where id in (5,6,8,9,10,14)");			
+				nodes = nodeDaoImpl.find("from Node where id in (1,2,3,7,11)");
+				links = linkDaoImpl.find("from Link where id in (1,2,3,9,10,17)");			
 				break;
 			case 6:
-				nodes = nodeDaoImpl.find("from Node where id in (1,3,4,5,7,8)");
-				links = linkDaoImpl.find("from Link where id in (3,4,12,13,2,10,11)");			
+				nodes = nodeDaoImpl.find("from Node where id in (12,13,14,15,16,17)");
+				links = linkDaoImpl.find("from Link where id in (20,21,22,23,25,26,27)");			
 				break;
 			case 7:
-				nodes = nodeDaoImpl.find("from Node where id in (1,3,4,5,7,8,10)");
-				links = linkDaoImpl.find("from Link where id in (3,4,12,13,2,10,11,9,14)");			
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27)");			
 				break;
 			case 8:
-				nodes = nodeDaoImpl.find("from Node where id in (4,7,8,10,16,17,19,20)");
-				links = linkDaoImpl.find("from Link where id in (9,11,13,21,22,24,26,27)");			
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,14,15,16,17,7,19)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,25,27,17,29,24)");			
 				break;
 			case 9:
-				nodes = nodeDaoImpl.find("from Node where id in (4,7,8,10,16,17,18,19,20)");
-				links = linkDaoImpl.find("from Link where id in (9,11,13,21,22,24,26,27,23,25)");			
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17,7,19)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27,17,29,24)");			
 				break;
 			case 10:
-				nodes = nodeDaoImpl.find("from Node where id in (1,2,3,4,5,6,7,8,9,10)");
-				links = linkDaoImpl.find("from Link where id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14)");			
+				nodes = nodeDaoImpl.find("from Node where id in (11,12,13,14,15,16,17,3,8,10)");
+				links = linkDaoImpl.find("from Link where id in (18,19,20,21,22,23,25,26,27,4,5,8,9)");			
 				break;
-			case 11:
-				nodes = nodeDaoImpl.find("from Node where id in (4,7,8,10,16,17,18,19,20,9,14)");
-				links = linkDaoImpl.find("from Link where id in (9,11,13,21,22,24,26,27,23,25,8,17,28)");			
-				break;
-			case 12:
-				nodes = nodeDaoImpl.find("from Node where id in (4,7,8,10,16,17,18,19,20,9,14,3)");
-				links = linkDaoImpl.find("from Link where id in (9,11,13,21,22,24,26,27,23,25,8,17,28,10,14)");			
-				break;
-			case 13:
-				nodes = nodeDaoImpl.find("from Node where id in (4,7,8,10,16,17,18,19,20,9,14,13,15)");
-				links = linkDaoImpl.find("from Link where id in (9,11,13,21,22,24,26,27,23,25,8,17,28,18,19,20)");			
-				break;
+
 		}
 		
 		subnet.getNodes().clear();
@@ -202,6 +191,14 @@ public class SubnetService {
 		} 
 	}
 	
+	public boolean testFault(Subnet s) {
+		Set<Link> links =s.getLinks();
+		for(Link l:links) {
+			if(l.isIfBreak()==true)
+				return true;
+		}
+		return false;
+	}
 	
 	public SubnetDaoImpl getSubnetDaoImpl() {
 		return subnetDaoImpl;
@@ -236,6 +233,8 @@ public class SubnetService {
 	public void setNetworkDaoImpl(NetworkDaoImpl networkDaoImpl) {
 		NetworkDaoImpl = networkDaoImpl;
 	}
+
+
 
 	
 
